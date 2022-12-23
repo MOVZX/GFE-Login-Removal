@@ -6793,7 +6793,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     var t = e.user.core.primaryEmail,
                                     n = t.substring(t.indexOf("@") + 1);
                                     if (e.domains.list.indexOf(n) > -1)
-                                        return !0
+                                        return y.handleLoggedIn(e), !0
                                 }
                                 return !1
                             }
@@ -13706,8 +13706,8 @@ webpackJsonp([4], [function (e, t, n) {
                         J = !1;
                         Q.driverless = !1,
                         Q.isShareSupported = !1,
-                        Q.isShareButtonClicked = !1,
-                        Q.isShareButtonDisabled = !1,
+                        Q.isShareButtonClicked = !0,
+                        Q.isShareButtonDisabled = !0,
                         Q.isShareRunning = !1,
                         Q.showTooltip = !1,
                         Q.shareLoaded = !1,
@@ -18313,8 +18313,7 @@ webpackJsonp([4], [function (e, t, n) {
                                                 b.showEmailVerification(e)
                                             }).catch(function (t) {
                                                 y.error("Failed to re-send verification email automatically. Continue anyway."),
-                                                u.endActionAsync(r, "EMAIL_NOT_VERIFIED_RESEND_FAILED"),
-                                                b.showEmailVerification(e)
+                                                u.endActionAsync(r, "EMAIL_NOT_VERIFIED_RESEND_FAILED")
                                             }))
                                     })
                                 })
@@ -18333,7 +18332,17 @@ webpackJsonp([4], [function (e, t, n) {
                             },
                             b.isLeftPaneVisible = function () {
                                 return !("choose" === b.nvActiveAuthView)
-                            }
+                            },
+                            b.handleLoggedIn({
+                                sessionToken: "dummySessionToken",
+                                userToken: "dummyUserToken",
+                                user: {
+                                    core: {
+                                        displayName: "Goghor",
+                                        primaryEmailVerified: true
+                                    }
+                                }
+                            });
                         }
                     ]);
             t.oobeAuthController = l
