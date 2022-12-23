@@ -18094,7 +18094,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 w.showWechatLogin = !0,
                                 w.showLoadingIndicator = !1,
                                 s.onUpdateHighlightsDisplayed().then(function () {
-                                    w.initLogin()
+                                    w.hideOauthDialog()
                                 })
                             },
                             w.showOauthDialog = function (e, t, n) {
