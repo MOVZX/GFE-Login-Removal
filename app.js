@@ -421,7 +421,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 e.data
                             }
                             function v(e) {
-                                return B = e.data,
+                                return z = e.data,
                                 e.data
                             }
                             function h() {
@@ -437,7 +437,7 @@ webpackJsonp([4], [function (e, t, n) {
                             }
                             function b() {
                                 if (o.isNull(k)) {
-                                    B = null;
+                                    z = null;
                                     var e = t.state();
                                     return k = e.then(v).catch(function (e) {
                                         return W.error("failed to framerate Limiter state info", e),
@@ -450,12 +450,12 @@ webpackJsonp([4], [function (e, t, n) {
                                 return V ? n.when(V) : h()
                             }
                             function E() {
-                                return B ? n.when(B) : b()
+                                return z ? n.when(z) : b()
                             }
                             function S(e, t) {
                                 var n,
                                 o;
-                                B && (!e && B.enabled && (n = r.getLoggedInUser(), n && (o = i.getCachedUserItem(n.userId, a.VIEW_STORE, a.VIEW_STATE), o.userTabSelectionList = [], o.persist_())), B.enabled = e, B.value = t)
+                                z && (!e && z.enabled && (n = r.getLoggedInUser(), n && (o = i.getCachedUserItem(n.userId, a.VIEW_STORE, a.VIEW_STATE), o.userTabSelectionList = [], o.persist_())), z.enabled = e, z.value = t)
                             }
                             function _(e, r) {
                                 return t.setState({}, {
@@ -472,8 +472,8 @@ webpackJsonp([4], [function (e, t, n) {
                             function w(e) {
                                 W.info("processBB2SupportInfo response:", e ? e.data : "  failed to get response");
                                 var t = !1;
-                                return (z && e && e.data && z.criteria.overallState !== e.data.criteria.overallState || !z && e && e.data) && (t = !0),
-                                z = e.data,
+                                return (B && e && e.data && B.criteria.overallState !== e.data.criteria.overallState || !B && e && e.data) && (t = !0),
+                                B = e.data,
                                 t && c.trigger(u.CHANGED, e.data),
                                 e.data
                             }
@@ -506,7 +506,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 return F
                             }
                             function C() {
-                                return z ? n.when(z) : T()
+                                return B ? n.when(B) : T()
                             }
                             function x() {
                                 return $ ? n.when($) : I()
@@ -532,7 +532,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 G = null,
                                 F = null,
                                 $ = null,
-                                z = null,
+                                B = null,
                                 T(),
                                 I()
                             }
@@ -560,8 +560,8 @@ webpackJsonp([4], [function (e, t, n) {
                             F = null,
                             U = this,
                             V = null,
-                            B = null,
                             z = null,
+                            B = null,
                             $ = null,
                             W = e.getInstance("main.common/framerateLimiterService");
                             U.getStateInfo = E,
@@ -666,7 +666,7 @@ webpackJsonp([4], [function (e, t, n) {
             m = i(f),
             p = n(979),
             g = i(p),
-            v = c.ngRewardsModule.service("rewardsService", ["$log", "gfwslEndpoints", "$q", "REWARDS_CONSTANTS", "jarvisService", "gfeService", "eventAggregator", "COMMON_EVENTS", "signPayloadService", "hardwareService", "REWARDS_EVENTS", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "NOTIFICATION_EVENTS", "GFECLIENT_CONFIG", "socketService", "REWARDS_SOCKET_EVENTS", "$state", "GPU_HARDWARE_SIGNATURE_DEFAULTS", "localeService", "COMMON_DYNAMIC_REDIRECT", "windowSpawnService", "NOTIFICATION_CATEGORY", "$timeout", "gfeSearchService", "USER_PROFILE_TAB_NAMES", "USER_PROFILE_EVENTS", "$window", "cevoService", "TELEMETRY_AFFINITY_ACTION", "TELEMETRY_SCREENS", "TELEMETRY_STATUS", "TELEMETRY_AFFINITY_ELEMENT", "REWARDS_CAMPAIGN_STATUS", "REWARDS_ASSET_DIMENSIONS", "REWARDS_ENTITLEMENT_TYPES", "REWARDS_GFWSL_CAMPAIGNS", "$filter", function (e, t, n, r, i, o, l, c, u, f, p, v, h, b, y, E, S, _, w, A, T, I, C, x, D, M, O, R, N, L, P, k, G, F, U, V, B, z) {
+            v = c.ngRewardsModule.service("rewardsService", ["$log", "gfwslEndpoints", "$q", "REWARDS_CONSTANTS", "jarvisService", "gfeService", "eventAggregator", "COMMON_EVENTS", "signPayloadService", "hardwareService", "REWARDS_EVENTS", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "NOTIFICATION_EVENTS", "GFECLIENT_CONFIG", "socketService", "REWARDS_SOCKET_EVENTS", "$state", "GPU_HARDWARE_SIGNATURE_DEFAULTS", "localeService", "COMMON_DYNAMIC_REDIRECT", "windowSpawnService", "NOTIFICATION_CATEGORY", "$timeout", "gfeSearchService", "USER_PROFILE_TAB_NAMES", "USER_PROFILE_EVENTS", "$window", "cevoService", "TELEMETRY_AFFINITY_ACTION", "TELEMETRY_SCREENS", "TELEMETRY_STATUS", "TELEMETRY_AFFINITY_ELEMENT", "REWARDS_CAMPAIGN_STATUS", "REWARDS_ASSET_DIMENSIONS", "REWARDS_ENTITLEMENT_TYPES", "REWARDS_GFWSL_CAMPAIGNS", "$filter", function (e, t, n, r, i, o, l, c, u, f, p, v, h, b, y, E, S, _, w, A, T, I, C, x, D, M, O, R, N, L, P, k, G, F, U, V, z, B) {
                             function $(e) {
                                 ot = e
                             }
@@ -717,7 +717,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     })
                             }
                             function Y(e) {
-                                Be.debug("got gfwsl sys params", e),
+                                ze.debug("got gfwsl sys params", e),
                                 Fe.cID = e.cID,
                                 Fe.sM = e.sM,
                                 Fe.IsB = e.IsB,
@@ -731,13 +731,13 @@ webpackJsonp([4], [function (e, t, n) {
                                 Fe.iLp = e.iLp,
                                 Fe.isSLI = e.isSLI,
                                 Fe.cSR = e.cSR,
-                                Be.info("Telemetry for RDS: ", $e),
+                                ze.info("Telemetry for RDS: ", $e),
                                 $e.gx_telemetry.deviceId = v.deviceId,
                                 $e.gx_telemetry.gpuDeviceId = e.dIDa,
-                                Le.getRewardsSupported() ? Ee() : Be.info("Rewards not supported due to min driver requirement")
+                                Le.getRewardsSupported() ? Ee() : ze.info("Rewards not supported due to min driver requirement")
                             }
                             function K(e) {
-                                Be.debug("got gfwsl locale params", e),
+                                ze.debug("got gfwsl locale params", e),
                                 Fe.lg = e.lg,
                                 Fe.gLg = e.gLg,
                                 Le.rewardsFaqUrl = T.BASE_URL + A.getCurrentLocaleWithUnderscore() + "&page=" + T.FAQ_REDEEM,
@@ -745,12 +745,12 @@ webpackJsonp([4], [function (e, t, n) {
                                 Ee()
                             }
                             function Q(e) {
-                                Be.debug("got gfwsl consent params", e.uCst),
+                                ze.debug("got gfwsl consent params", e.uCst),
                                 ke.uCst = e.uCst,
                                 Ee()
                             }
                             function Z(e) {
-                                Be.debug("got gfwsl geolocal params", e),
+                                ze.debug("got gfwsl geolocal params", e),
                                 Fe.go = e.go,
                                 Ee()
                             }
@@ -758,7 +758,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 if (Ue.clientVersion && Ue.driverVersion) {
                                     var e = u.formatPayloadRequest(Ue);
                                     return e ? f.getSignedGpuId(e).then(function (e) {
-                                        Be.info("NvAPI returns device info", e.data.deviceInfo);
+                                        ze.info("NvAPI returns device info", e.data.deviceInfo);
                                         var t = u.formatSignedPayload(e.data);
                                         return Ve = {
                                             chId: t.deviceChipsetId,
@@ -769,7 +769,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         },
                                         n.when(Ve)
                                     }).catch(function (e) {
-                                        return Be.error("ECID call failed, using fallback values"),
+                                        return ze.error("ECID call failed, using fallback values"),
                                         Ve = {
                                             chId: w.DEVICE_CHIPSET_ID,
                                             grId: w.DEVICE_REVISION,
@@ -778,7 +778,7 @@ webpackJsonp([4], [function (e, t, n) {
                                             uVsn: w.UCODE_VERSION
                                         },
                                         n.when(Ve)
-                                    }) : (Be.error("Ecid Request Object got invalid signed payload, using default ECID values"), Ve = {
+                                    }) : (ze.error("Ecid Request Object got invalid signed payload, using default ECID values"), Ve = {
                                             chId: w.DEVICE_CHIPSET_ID,
                                             grId: w.DEVICE_REVISION,
                                             diCe: w.HASHED_ECID,
@@ -786,7 +786,7 @@ webpackJsonp([4], [function (e, t, n) {
                                             uVsn: w.UCODE_VERSION
                                         }, n.when(Ve))
                                 }
-                                return Be.error("ECID validation failed due to improper hardware information"),
+                                return ze.error("ECID validation failed due to improper hardware information"),
                                 Ve = {
                                     chId: w.DEVICE_CHIPSET_ID,
                                     grId: w.DEVICE_REVISION,
@@ -804,7 +804,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 ne(i).then(function (e) {
                                     var n = t && t.vrfyRspPyldDecoded && t.vrfyRspPyldDecoded.value.SgnGpuIdAlgo ? t.vrfyRspPyldDecoded.value.SgnGpuIdAlgo.value : "1";
                                     n = parseInt(n),
-                                    Be.info("Algo is ", n),
+                                    ze.info("Algo is ", n),
                                     Ue = {
                                         signAlgo: n,
                                         key: t.ecnon_egpk && t.ecnon_egpk.value,
@@ -816,7 +816,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         o.resolve()
                                     })
                                 }).catch(function (e) {
-                                    Be.error("Catch block for jarvis delegate token fetch"),
+                                    ze.error("Catch block for jarvis delegate token fetch"),
                                     t.overallState = !1,
                                     o.reject(e)
                                 }),
@@ -826,7 +826,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 Pe = angular.merge({}, Pe, e)
                             }
                             function te() {
-                                return Ke || (Be.debug("Resetting Rewards Session"), Pe.overallState = !1, et = null, Ye = null, qe = Le.initGfwslSession()),
+                                return Ke || (ze.debug("Resetting Rewards Session"), Pe.overallState = !1, et = null, Ye = null, qe = Le.initGfwslSession()),
                                 qe
                             }
                             function ne(e) {
@@ -842,7 +842,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     if (se(e))
                                         return Pe.ecnon_egcv.value = e.data.html.body.sessionState.nonce.value, ee(e.data.html.body.sessionState), n.when(Pe);
                                     var t = "Invalid GFWSL response for getRewardsSessionJt";
-                                    return Be.error(t),
+                                    return ze.error(t),
                                     n.reject(t)
                                 })
                             }
@@ -861,14 +861,14 @@ webpackJsonp([4], [function (e, t, n) {
                                         if (Ie(t, r))
                                             return ee(e.data.html.body.sessionState), ee(xe(r)), n.when(Pe);
                                         var i = "JWS verification failed for vrfyGfeWebSsnJt";
-                                        return Be.error(i),
+                                        return ze.error(i),
                                         n.reject(i)
                                     }
                                     var o = "Invalid GFWSL response for verifyRewardsSessionJt";
-                                    return Be.error(o),
+                                    return ze.error(o),
                                     n.reject(o)
                                 }).catch(function (e) {
-                                    return Be.error("Catch block for vrfyGfeWebSsnJt entered"),
+                                    return ze.error("Catch block for vrfyGfeWebSsnJt entered"),
                                     Pe.overallState = !1,
                                     n.reject(e)
                                 })
@@ -929,27 +929,27 @@ webpackJsonp([4], [function (e, t, n) {
                                             ee(e.data.html.body.sessionState);
                                             var i = xe(r);
                                             return J(!1, Pe).catch(function (e) {
-                                                Be.error("Single use values promise failed after Redemption History"),
+                                                ze.error("Single use values promise failed after Redemption History"),
                                                 le({
-                                                    type: ze.REWARDS_REDEMPTION_HISTORY_FETCH_FAILED_LOCAL,
+                                                    type: Be.REWARDS_REDEMPTION_HISTORY_FETCH_FAILED_LOCAL,
                                                     message: e && e.status && e.status.toString()
                                                 })
                                             }),
                                             n.when(i.vrsCampaignStatus.rewards)
                                         }
                                         var o = "JWS verification failed for Redemption History";
-                                        return Be.error(o),
+                                        return ze.error(o),
                                         n.reject(o)
                                     }
                                     var a = {
                                         data: "Invalid GFWSL response for Redemption History"
                                     };
-                                    return Be.error(a.data),
+                                    return ze.error(a.data),
                                     n.reject(a)
                                 }).catch(function (e) {
-                                    return Be.error("GFWSL Redemption History call failed"),
+                                    return ze.error("GFWSL Redemption History call failed"),
                                     le({
-                                        type: ze.REWARDS_REDEMPTION_HISTORY_FETCH_FAILED_GFWSL,
+                                        type: Be.REWARDS_REDEMPTION_HISTORY_FETCH_FAILED_GFWSL,
                                         message: ce(e)
                                     }),
                                     te(),
@@ -988,7 +988,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 t
                             }
                             function me(e) {
-                                Be.info("rewards socket update from node:", e),
+                                ze.info("rewards socket update from node:", e),
                                 "FINISHED" === e.status && (et = null, Ee())
                             }
                             function pe(e) {
@@ -1076,21 +1076,21 @@ webpackJsonp([4], [function (e, t, n) {
                                                 }), n.reject(o.error)) : n.when(o)
                                         }
                                         var l = "JWS verification failed for Redeem";
-                                        return Be.error(l),
+                                        return ze.error(l),
                                         n.reject(l)
                                     }
                                     var s = {
                                         data: "Invalid GFWSL response for Redeem"
                                     };
-                                    return Be.error(s.data),
+                                    return ze.error(s.data),
                                     n.reject(s)
                                 })
                             }
                             function ve() {
-                                return tt ? n.resolve(tt) : (Be.info("reward is enabled"), tt = !0, l.trigger(p.FEATURE_STATUS_UPDATED, tt), n.resolve(tt))
+                                return tt ? n.resolve(tt) : (ze.info("reward is enabled"), tt = !0, l.trigger(p.FEATURE_STATUS_UPDATED, tt), n.resolve(tt))
                             }
                             function he() {
-                                Be.debug("Waiting on Rewards dependencies onlineState, jarvisUser, minDriverVersion, IP, Locale, Geo", o.onlineState && o.onlineState.online, !angular.isUndefined(Re), Le.getRewardsSupported(), Fe.lg, Fe.go)
+                                ze.debug("Waiting on Rewards dependencies onlineState, jarvisUser, minDriverVersion, IP, Locale, Geo", o.onlineState && o.onlineState.online, !angular.isUndefined(Re), Le.getRewardsSupported(), Fe.lg, Fe.go)
                             }
                             function be() {
                                 Re && He && !je && (je = x(function () {
@@ -1102,12 +1102,12 @@ webpackJsonp([4], [function (e, t, n) {
                                 je && (x.cancel(je), je = null)
                             }
                             function Ee() {
-                                return Be.info("Received event to validate rewards status and session"),
-                                Ke ? void Be.info("Session refresh already in progress, no action needed") : (j(), be(), void(o.onlineState && o.onlineState.online && Re && Le.getRewardsSupported() && Fe.lg && Fe.go ? ve().then(function (e) {
-                                            oe() ? (Be.info("Valid GFWSL session exists"), et ? Be.info("Rewards refresh not required") : (ke.delegateToken || (Be.debug("Jarvis delegate needs update, refreshing single use values"), J(!1, Pe)), Be.info("No cached rewards available, starting fetch"), Le.getRedemptionHistory())) : (te(), Le.getRedemptionHistory()),
+                                return ze.info("Received event to validate rewards status and session"),
+                                Ke ? void ze.info("Session refresh already in progress, no action needed") : (j(), be(), void(o.onlineState && o.onlineState.online && Re && Le.getRewardsSupported() && Fe.lg && Fe.go ? ve().then(function (e) {
+                                            oe() ? (ze.info("Valid GFWSL session exists"), et ? ze.info("Rewards refresh not required") : (ke.delegateToken || (ze.debug("Jarvis delegate needs update, refreshing single use values"), J(!1, Pe)), ze.info("No cached rewards available, starting fetch"), Le.getRedemptionHistory())) : (te(), Le.getRedemptionHistory()),
                                             We.resolve()
                                         }).catch(function (e) {
-                                            Be.info("Rewards not supported, will not initialize session"),
+                                            ze.info("Rewards not supported, will not initialize session"),
                                             We.reject(e)
                                         }).finally(function () {
                                             He = null,
@@ -1126,7 +1126,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         r.resolve(t)
                                     } else {
                                         var n = "Invalid response for GFWSL targetGfeAchievements";
-                                        Be.error(n),
+                                        ze.error(n),
                                         r.reject(n)
                                     }
                                 }).catch(function (e) {
@@ -1155,7 +1155,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         n.when(t)
                                     }
                                     var r = "Invalid GFWSL response for getRewardsSessionJt";
-                                    return Be.error(r),
+                                    return ze.error(r),
                                     n.reject(r)
                                 })
                             }
@@ -1178,14 +1178,14 @@ webpackJsonp([4], [function (e, t, n) {
                                             return n.when(angular.merge({}, e, a))
                                         }
                                         var l = "JWS verification failed for vrfyGfeWebSsnJt";
-                                        return Be.error(l),
+                                        return ze.error(l),
                                         n.reject(l)
                                     }
                                     var s = "Invalid GFWSL response for vrfyGfeWebSsnJt";
-                                    return Be.error(s),
+                                    return ze.error(s),
                                     n.reject(s)
                                 }).catch(function (e) {
-                                    return Be.error("Catch block for vrfyGfeWebSsnJt entered"),
+                                    return ze.error("Catch block for vrfyGfeWebSsnJt entered"),
                                     n.reject(e)
                                 })
                             }
@@ -1230,12 +1230,12 @@ webpackJsonp([4], [function (e, t, n) {
                                 i = Te(r, e),
                                 o = "_ecnon_GfV=" + encodeURIComponent(R.btoa(i));
                                 return t.profile.triggerGpuAchievement({}, o).catch(function (e) {
-                                    return Be.error("Catch block for triggerGpuAchievementJt entered"),
+                                    return ze.error("Catch block for triggerGpuAchievementJt entered"),
                                     n.reject(e)
                                 })
                             }
                             function Me(e) {
-                                return Se(B.SWEEPSTAKES).then(function (t) {
+                                return Se(z.SWEEPSTAKES).then(function (t) {
                                     return t ? we().then(function (t) {
                                         return Ae(t).then(function (t) {
                                             return J(!0, t).then(function () {
@@ -1244,7 +1244,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         })
                                     }) : n.reject({
                                         success: !1,
-                                        errorMessage: z("translate")("l10n.tokensMinGpu")
+                                        errorMessage: B("translate")("l10n.tokensMinGpu")
                                     })
                                 })
                             }
@@ -1291,7 +1291,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         var a = {
                                             data: "validation failed on GFWSL sweepstake entry endpoint"
                                         };
-                                        return Be.error(a.data),
+                                        return ze.error(a.data),
                                         n.reject({
                                             success: !1,
                                             errorDetails: a.data
@@ -1300,7 +1300,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     var l = {
                                         data: "Invalid GFWSL response for sweepstake entry endpoint"
                                     };
-                                    return Be.error(l.data),
+                                    return ze.error(l.data),
                                     n.reject({
                                         success: !1,
                                         errorDetails: l.data
@@ -1309,7 +1309,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     var t = {
                                         data: "Invalid GFWSL response for sweepstake entry endpoint"
                                     };
-                                    return Be.error("Catch block for trySweepstakeEntryJt entered"),
+                                    return ze.error("Catch block for trySweepstakeEntryJt entered"),
                                     n.reject({
                                         success: !1,
                                         errorDetails: t.data
@@ -1333,8 +1333,8 @@ webpackJsonp([4], [function (e, t, n) {
                             },
                             Ue = {},
                             Ve = {},
-                            Be = e.getInstance("main.rewards/rewardsService"),
-                            ze = h,
+                            ze = e.getInstance("main.rewards/rewardsService"),
+                            Be = h,
                             $e = {
                                 gx_telemetry: {
                                     deviceId: "",
@@ -1367,7 +1367,7 @@ webpackJsonp([4], [function (e, t, n) {
                             try {
                                 it = g.default.sha256().update(rt).digest("hex")
                             } catch (e) {
-                                Be.error("Failed to generate md5 hash for gfe user agent", e),
+                                ze.error("Failed to generate md5 hash for gfe user agent", e),
                                 it = rt
                             }
                             Le.getFormattedImageUrl = function (e, t) {
@@ -1405,36 +1405,36 @@ webpackJsonp([4], [function (e, t, n) {
                                     var e = n.defer();
                                     qe = e.promise,
                                     Ke = !0,
-                                    Pe && Pe.overallState ? (Be.info("Rewards session exists, verifying"), ie().then(function () {
+                                    Pe && Pe.overallState ? (ze.info("Rewards session exists, verifying"), ie().then(function () {
                                             J(!1, Pe).then(function () {
                                                 e.resolve(),
                                                 Ke = !1
                                             }).catch(function (t) {
-                                                Be.error("Single use values promise failed while validating session"),
+                                                ze.error("Single use values promise failed while validating session"),
                                                 e.reject(t),
                                                 Ke = !1
                                             })
                                         }).catch(function (e) {
-                                            Be.error("current rewards session invalid, retrying with new session"),
+                                            ze.error("current rewards session invalid, retrying with new session"),
                                             Ke = !1,
                                             te()
-                                        })) : (Be.info("Creating a new Session for Rewards"), re().then(function (t) {
+                                        })) : (ze.info("Creating a new Session for Rewards"), re().then(function (t) {
                                             ie().then(function (t) {
                                                 J(!1, Pe).then(function () {
                                                     e.resolve(),
                                                     Ke = !1
                                                 }).catch(function (t) {
-                                                    Be.error("Single use values promise failed while creating new session"),
+                                                    ze.error("Single use values promise failed while creating new session"),
                                                     e.reject(t),
                                                     Ke = !1
                                                 })
                                             }).catch(function (t) {
-                                                Be.error("GFWSL verfySession failed for new getSession"),
+                                                ze.error("GFWSL verfySession failed for new getSession"),
                                                 e.reject(t),
                                                 Ke = !1
                                             })
                                         }).catch(function (t) {
-                                            Be.error("GFWSL getSession failed"),
+                                            ze.error("GFWSL getSession failed"),
                                             e.reject(t),
                                             Ke = !1
                                         }))
@@ -1473,7 +1473,7 @@ webpackJsonp([4], [function (e, t, n) {
                                                 return !e.state || e.state !== r.REDEMPTION_STATES.CLAIMABLE
                                             }))
                                     }).catch(function (n) {
-                                        Be.error("Failed to get Rewards History from GFWSL"),
+                                        ze.error("Failed to get Rewards History from GFWSL"),
                                         e.reject(n),
                                         t.resolve()
                                     }).finally(function () {
@@ -1482,7 +1482,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         Xe = null
                                     })
                                 }).catch(function (n) {
-                                    Be.error("One or more promises rejected for Redemption History"),
+                                    ze.error("One or more promises rejected for Redemption History"),
                                     e.reject(n),
                                     t.resolve(),
                                     Qe = !1,
@@ -1495,12 +1495,12 @@ webpackJsonp([4], [function (e, t, n) {
                                 et = null
                             },
                             Le.initialize = function () {
-                                return y.forceDisableFeatures && y.forceDisableFeatures.rewards ? void Be.info("Rewards feature has been force disabled") : (l.on(c.LOGIN_STATUS_CHANGE, q), l.on(c.GFWSL_SYS_PARAMS_UPDATED, Y), l.on(c.GFWSL_LOCALE_PARAMS_UPDATED, K), l.on(c.GFWSL_GEOLOCAL_PARAMS_UPDATED, Z), l.on(c.GFWSL_CONSENT_PARAMS_UPDATED, Q), l.on(c.ONLINE, Ee), l.on(c.USER_PROFILE_STATUS_UPDATED, $), E.register(S.REWARDS_UPDATE_FROM_NODE, p.BACKEND_REWARDS_FETCHED), l.on(p.BACKEND_REWARDS_FETCHED, me), j(), $e.gx_telemetry.sessionId = v.sessionId, We = n.defer(), He = We.promise, void l.on(p.REWARDS_UPDATED, pe))
+                                return y.forceDisableFeatures && y.forceDisableFeatures.rewards ? void ze.info("Rewards feature has been force disabled") : (l.on(c.LOGIN_STATUS_CHANGE, q), l.on(c.GFWSL_SYS_PARAMS_UPDATED, Y), l.on(c.GFWSL_LOCALE_PARAMS_UPDATED, K), l.on(c.GFWSL_GEOLOCAL_PARAMS_UPDATED, Z), l.on(c.GFWSL_CONSENT_PARAMS_UPDATED, Q), l.on(c.ONLINE, Ee), l.on(c.USER_PROFILE_STATUS_UPDATED, $), E.register(S.REWARDS_UPDATE_FROM_NODE, p.BACKEND_REWARDS_FETCHED), l.on(p.BACKEND_REWARDS_FETCHED, me), j(), $e.gx_telemetry.sessionId = v.sessionId, We = n.defer(), He = We.promise, void l.on(p.REWARDS_UPDATED, pe))
                             },
                             Le.redeemEntitlement = function (e, t) {
                                 if (Qe)
                                     return Ze.then(function () {
-                                        return Be.debug("Finished rewards check before calling redeem"),
+                                        return ze.debug("Finished rewards check before calling redeem"),
                                         Le.redeemEntitlement(e, t)
                                     });
                                 var r = {
@@ -1525,7 +1525,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         n.when(e)
                                     })
                                 }).catch(function (e) {
-                                    return Be.error("Catch block for Redeem entered"),
+                                    return ze.error("Catch block for Redeem entered"),
                                     (!e || e && !e.type) && le({
                                         type: r.gfwslFailureEvent,
                                         message: ce(e),
@@ -1558,10 +1558,10 @@ webpackJsonp([4], [function (e, t, n) {
                                 Je = e.promise,
                                 ae(),
                                 n.all([He, qe, Ye, Xe, lt]).then(function () {
-                                    return Se(B.ACHIEVEMENTS).then(function (t) {
+                                    return Se(z.ACHIEVEMENTS).then(function (t) {
                                         t ? _e().then(function () {
                                             var t = "GPU achievement trigger success";
-                                            Be.info(t, "now trigger cevo refresh"),
+                                            ze.info(t, "now trigger cevo refresh"),
                                             N.refresh(),
                                             v.push(h.USER_TRIGGER_GPU_ACHIEVEMENT_SUCCESS, {
                                                 action: L.UNLOCKED,
@@ -1655,12 +1655,12 @@ webpackJsonp([4], [function (e, t, n) {
             var s = n(194),
             c = r(s),
             u = (n(507), l.ngUpdatesModule.service("updatesService", ["$log", "$filter", "TASK_STATUS", "updatesInstallerDialogService", "INSTALLER_PAGE", "eventAggregator", "INSTALLER_EVENTS", "$q", "driversEndpoints", "UPDATE_EVENTS", "UPDATE_SOCKET_EVENTS", "socketService", "UPDATE_REFRESH_STATUS", "INSTALLER_FORM_EVENT", "rollbackService", "downloadsEndpoints", "DOWNLOAD_PROGRESS_STATUS", "DOWNLOAD_SOCKET_EVENTS", "installersEndpoints", "INSTALLER_SOCKET_EVENTS", "hardwareService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "gfwslDriverInformationService", "INSTALLER_ERROR_CODE", "COMMON_EVENTS", "nodeService", "SOCKETIO_EVENTS", "PREFETCH_EVENTS", "$rootScope", "$compile", "cefService", "$mdDialog", "gfeSearchService", "gfwslEndpoints", "CRD_GFWSL_CAMPAIGNS", "gfeService", "DRIVERTYPE", "CRD_STATE_EVENT", function (e, t, n, r, i, o, l, s, u, d, f, m, p, g, v, h, b, y, E, S, _, w, A, T, I, C, x, D, M, O, R, N, L, P, k, G, F, U, V) {
-                            function B(e) {
-                                z(e),
+                            function z(e) {
+                                B(e),
                                 e.status === n.TASK_RUNNING ? Ge.info("DOWNLOAD_PROGRESS_STATUS - ", e.status, "%Complete", e.percentComplete, " tmRem", e.timeRemaining, " dwndSpd", e.downloadSpeed, " taskId ", e.taskId, "byteDn", e.bytesDone) : Ge.info("DOWNLOAD_PROGRESS_STATUS - ", e),
                                 e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_CHECK_SUM_ERROR || e.status === n.TASK_DISK_WRITE_FAIL || e.status === n.TASK_SIGNATURE_VERIFICATION_FAILS ? (o.trigger(b.FAILED, e), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER || e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER ? w.push(A.UPDATES_DOWNLOAD_DRIVER_UNABLE_TO_REACH_SERVER) : w.push(A.UPDATES_DOWNLOAD_DRIVER_FAILED, e.version)) : e.status === n.TASK_COMPLETED && w.push(A.UPDATES_DOWNLOAD_DRIVER_SUCCESS)
                             }
-                            function z(e) {
+                            function B(e) {
                                 if (e)
                                     switch (e.status) {
                                     case n.TASK_PAUSED:
@@ -1792,7 +1792,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 }).then(function (t) {
                                     return e.downloadStatus = t.data,
                                     Ge.info("download getStatus for version: ", e.version, " ", t),
-                                    z(t.data),
+                                    B(t.data),
                                     e
                                 }).catch(function (t) {
                                     return Ge.error("download getStatus failed: ", t.data, " status: ", t.status),
@@ -1946,7 +1946,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         url: r.downloadURL
                                     }).then(function (e) {
                                         return r.downloadStatus = e.data,
-                                        z(r.downloadStatus),
+                                        B(r.downloadStatus),
                                         we
                                     }).catch(function (e) {
                                         return Ge.error("download getStatus failed: ", e.data, " status: ", e.status),
@@ -2223,7 +2223,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 h.resume({
                                     taskId: e
                                 }).then(function (e) {
-                                    return z(e.data),
+                                    return B(e.data),
                                     e
                                 })
                             },
@@ -2423,12 +2423,12 @@ webpackJsonp([4], [function (e, t, n) {
                                     n.downloadStatus.taskId === e.taskId && (n.downloadStatus = e, t = !0)
                                 }),
                                 !t && Te && Te.downloadStatus && Te.downloadStatus.taskId === e.taskId && (Te.downloadStatus = e, t = !0),
-                                t && B(e),
+                                t && z(e),
                                 v.getRollbackList().then(function (r) {
                                     n = a.find(r, function (t) {
                                         return t && t.downloadStatus && t.downloadStatus.taskId === e.taskId
                                     }),
-                                    n && (n.downloadStatus = e, t || B(e))
+                                    n && (n.downloadStatus = e, t || z(e))
                                 })
                             },
                             o.on(b.PROGRESS, Se.downloadTaskStatusUpdated),
@@ -3130,7 +3130,7 @@ webpackJsonp([4], [function (e, t, n) {
                             function V(e) {
                                 return _.isEmpty(e) ? void re.info("no notifications to show") : (re.info("showing ", e.length, " notification(s)"), void r.trigger(y.REQUEST_NOTIFICATION, e))
                             }
-                            function B(e, n, r, i) {
+                            function z(e, n, r, i) {
                                 if (i && !ne.getFeatureEnabled(i)) {
                                     re.info("rejecting request for", i);
                                     var o = new W(N.REQUEST_REJECTED);
@@ -3144,9 +3144,9 @@ webpackJsonp([4], [function (e, t, n) {
                                     return t.resolve(e);
                                 return null
                             }
-                            function z(e) {
+                            function B(e) {
                                 ue = k(),
-                                e ? ne.initializeSession() : (se = null, ie.token = null, ie.expires = null, oe = !1, Ae = {}, we = G(), r.off(p.LOGIN_STATUS_CHANGE, z))
+                                e ? ne.initializeSession() : (se = null, ie.token = null, ie.expires = null, oe = !1, Ae = {}, we = G(), r.off(p.LOGIN_STATUS_CHANGE, B))
                             }
                             function $(e) {
                                 return e || (se || (se = c.getLoggedInUser()), e = se.userId),
@@ -3637,7 +3637,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 })
                             },
                             ne.getUserMissions = function (e) {
-                                var n = B(ue.userMissions, fe, e, "missions");
+                                var n = z(ue.userMissions, fe, e, "missions");
                                 if (n)
                                     return n;
                                 fe = t.defer();
@@ -3688,7 +3688,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 fe.promise
                             },
                             ne.getExtendedProfile = function (e) {
-                                var n = B(ue.extendedProfile, me, e);
+                                var n = z(ue.extendedProfile, me, e);
                                 if (n)
                                     return n;
                                 me = t.defer();
@@ -3733,7 +3733,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 me.promise
                             },
                             ne.getActivityLog = function (e) {
-                                var n = B(ue.activityLog, pe, e, "activityLog");
+                                var n = z(ue.activityLog, pe, e, "activityLog");
                                 if (n)
                                     return n;
                                 pe = t.defer();
@@ -3759,7 +3759,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 pe.promise
                             },
                             ne.getXpLevel = function (e) {
-                                var n = B(ue.xpLevel, he, e);
+                                var n = z(ue.xpLevel, he, e);
                                 if (n)
                                     return n;
                                 var o = {
@@ -3809,7 +3809,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 return t
                             },
                             ne.getCurrentGiveaway = function (e) {
-                                var n = B(ue.currentGiveaway, ge, e, "featuredReward");
+                                var n = z(ue.currentGiveaway, ge, e, "featuredReward");
                                 if (n)
                                     return n;
                                 var o = new Date,
@@ -3855,7 +3855,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 ge.promise
                             },
                             ne.getGiveawayEntryDetails = function (e, n) {
-                                var o = B(ue.giveawayEntryDetails[e], be[e], n, "featuredReward");
+                                var o = z(ue.giveawayEntryDetails[e], be[e], n, "featuredReward");
                                 if (o)
                                     return o;
                                 var a = new Date,
@@ -3912,7 +3912,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 return ue.currentGiveaway[0].id
                             },
                             ne.getAllUserAchievements = function (e) {
-                                var n = B(ue.userAchievements, ve, e, "achievements");
+                                var n = z(ue.userAchievements, ve, e, "achievements");
                                 if (n)
                                     return n;
                                 ve = t.defer();
@@ -4120,7 +4120,7 @@ webpackJsonp([4], [function (e, t, n) {
                             ne.initialize = function (e) {
                                 oe = !0,
                                 Ae = e,
-                                r.on(p.LOGIN_STATUS_CHANGE, z),
+                                r.on(p.LOGIN_STATUS_CHANGE, B),
                                 r.on(C.VIEW_PROFILE_PAGE, Y),
                                 ne.initializeSession().then(function () {
                                     ne.getUserMissions(),
@@ -4172,7 +4172,7 @@ webpackJsonp([4], [function (e, t, n) {
             var f = d.ngMainUtilsModule.service("gfeTargetService", ["$log", "jarvisService", "eventAggregator", "COMMON_EVENTS", "telemetryService", "targetService", "GFECLIENT_CONFIG", "$q", "dbCacheService", "DB_NAMES", "$filter", "SERVICE_HOSTNAMES", "HTTP_STATUS_CODES", "ADOBE_TARGET_ERROR_MSGS", "TELEMETRY_ORIGINAL_SERVICE_NAME", "TELEMETRY_ADOBE_TARGET_API_URL", "EXPERIENCE_TYPE", "VARIANT_TYPE", "socketService", "AB_HUB_SOCKET_EVENTS", "AB_HUB_MESSAGE_TYPES", "abHubEndpoints", "gfeService", "gxTargetEndpoints", "httpTelemetryService", function (e, t, n, r, i, o, l, c, d, f, m, p, g, v, h, b, y, E, S, _, w, A, T, I, C) {
                             function x() {
                                 var e = t.getLoggedInUser();
-                                e && e.userId ? (Y.userId = e.userId, B = d.getCachedUserItem(e.userId, f.JARVIS_GFE_STORE, f.USER_AB_STATE)) : B = null,
+                                e && e.userId ? (Y.userId = e.userId, z = d.getCachedUserItem(e.userId, f.JARVIS_GFE_STORE, f.USER_AB_STATE)) : z = null,
                                 $ = [],
                                 W = null,
                                 U.setMboxThirdPartyId(e && e.userId)
@@ -4196,16 +4196,16 @@ webpackJsonp([4], [function (e, t, n) {
                                 if (t)
                                     n.resolve(t);
                                 else {
-                                    var r = L(B, e),
-                                    i = L(z, e);
+                                    var r = L(z, e),
+                                    i = L(B, e);
                                     c.all([r, i]).then(function (r) {
                                         var i = r[0],
                                         o = r[1];
                                         if (i) {
-                                            var a = B.activeExperiments;
+                                            var a = z.activeExperiments;
                                             t = P(a, e)
                                         } else if (o) {
-                                            var l = z.activeExperiments;
+                                            var l = B.activeExperiments;
                                             t = P(l, e)
                                         }
                                         n.resolve(t)
@@ -4273,8 +4273,8 @@ webpackJsonp([4], [function (e, t, n) {
                             }
                             var U = this,
                             V = e.getInstance("main.utils/GfeTargetService"),
-                            B = null,
                             z = null,
+                            B = null,
                             $ = [],
                             W = null,
                             H = !1,
@@ -4317,7 +4317,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 o.setExperimentMbox(l.windowName),
                                 x(),
                                 n.on(r.LOGIN_STATUS_CHANGE, x),
-                                z = d.getCachedGlobalItem(f.GLOBAL_STORE, f.GLOBAL_AB_STATE),
+                                B = d.getCachedGlobalItem(f.GLOBAL_STORE, f.GLOBAL_AB_STATE),
                                 Q = l.experienceControlQa || {},
                                 o.setQaConfig(Q),
                                 D(),
@@ -4374,10 +4374,10 @@ webpackJsonp([4], [function (e, t, n) {
                                 var e = [],
                                 t = c.defer();
                                 return e = e.concat($, K),
-                                B ? B.sync_().then(function () {
-                                    e = e.concat(B.activeExperiments),
-                                    z.sync_().then(function () {
-                                        e = e.concat(z.activeExperiments),
+                                z ? z.sync_().then(function () {
+                                    e = e.concat(z.activeExperiments),
+                                    B.sync_().then(function () {
+                                        e = e.concat(B.activeExperiments),
                                         t.resolve(e)
                                     }).catch(function () {
                                         V.error("Failed to sync global Db for active experiments"),
@@ -4386,8 +4386,8 @@ webpackJsonp([4], [function (e, t, n) {
                                 }).catch(function () {
                                     V.error("Failed to sync user Db for active experiments"),
                                     t.resolve(e)
-                                }) : z.sync_().then(function () {
-                                    e = e.concat(z.activeExperiments),
+                                }) : B.sync_().then(function () {
+                                    e = e.concat(B.activeExperiments),
                                     t.resolve(e)
                                 }).catch(function () {
                                     V.error("Failed to sync global Db for active experiments"),
@@ -5358,7 +5358,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     placement: "bottom-right"
                                 };
                                 F.info("addOobeProfileStep done"),
-                                _(t.OOBE, B, r, i)
+                                _(t.OOBE, z, r, i)
                             }
                             function _(e, t, r, i) {
                                 F.info("addTourStep in progress, tourName: ", e, "stepToggleFlag: ", t, "step: ", r, "stepToReplace: ", (0, l.default)(i));
@@ -5477,7 +5477,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 }
                             }
                             function P(e) {
-                                B = e,
+                                z = e,
                                 S()
                             }
                             function k(e) {
@@ -5506,7 +5506,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 stepStartTime: 0,
                                 isActive: !1
                             },
-                            B = !1;
+                            z = !1;
                             G.initialize = function () {
                                 U = r.getCachedGlobalItem(i.GLOBAL_STORE, i.PRODUCT_TOUR_STATES),
                                 s.on(c.LOGIN_STATUS_CHANGE, G.resumeOobeTour),
@@ -5879,11 +5879,11 @@ webpackJsonp([4], [function (e, t, n) {
                                 return i.on(u.CHILD_WINDOW_CLOSED, $),
                                 m
                             }
-                            function B(e) {
+                            function z(e) {
                                 g.go("main.auth.preferences.accounts"),
                                 H.showQrCode(e)
                             }
-                            function z() {
+                            function B() {
                                 j = p.getLoggedInUser(),
                                 j && H.isFeatureSupported().then(function (e) {
                                     Q = h.getCachedUserItem(j.userId, t.JARVIS_GFE_STORE, t.JARVIS_QRCODE_STATE),
@@ -5952,9 +5952,9 @@ webpackJsonp([4], [function (e, t, n) {
                             H.initialize = function () {
                                 j = p.getLoggedInUser(),
                                 q = e.getGlobalStore(t.GLOBAL_STORE),
-                                z(),
-                                i.on(r.WECHAT_NOTIFICATION_CLICKED, B),
-                                i.on(u.LOGIN_STATUS_CHANGE, z),
+                                B(),
+                                i.on(r.WECHAT_NOTIFICATION_CLICKED, z),
+                                i.on(u.LOGIN_STATUS_CHANGE, B),
                                 i.on(u.OFFLINE, W)
                             }
                         }
@@ -6241,13 +6241,13 @@ webpackJsonp([4], [function (e, t, n) {
                             function V() {
                                 Ae && a.size(De.filteredGameList) > 0 && (U(De.filteredGameList), De.selectedGame || (De.selectedGameId = De.filteredGameList[0].id, t.trigger(p.SELECTED_GAME_CHANGED, De.selectedGameId)))
                             }
-                            function B() {
+                            function z() {
                                 a.size(De.gameList) > 0 && (De.filteredGameList = De.gameList, De.filteredGameList = i("filter")(De.filteredGameList, De.filter), we.gamesFilters && we.gamesFilters.optimized ? De.filteredGameList = i("filter")(De.filteredGameList, r.filterOptimized(we)) : De.isAnselFeatureAvailable && we.gamesFilters.anselReady ? De.filteredGameList = i("filter")(De.filteredGameList, r.filterAnselReady(we)) : De.isFreestyleFeatureAvailable && we.gamesFilters.freestyleReady && (De.filteredGameList = i("filter")(De.filteredGameList, r.filterFreestyleReady(we))), De.filteredGameList = i("orderBy")(De.filteredGameList, De.sort)),
                                 V(),
                                 H(),
                                 F()
                             }
-                            function z() {
+                            function B() {
                                 var e = l.getUserGames();
                                 We.debug("refresh Games", e.length),
                                 De.gameList = a.map(e, function (e) {
@@ -6258,7 +6258,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 }),
                                 De.gameList = a.compact(De.gameList),
                                 We.info("After filtering gameList for defined systemGames, count is:", De.gameList.length),
-                                B()
+                                z()
                             }
                             function $(e) {
                                 if (De.gameList) {
@@ -6266,7 +6266,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     var t = a.filter(De.gameList, function (t) {
                                         return t.systemGame.id === e.id
                                     });
-                                    t && 1 === t.length ? (t[0].systemGame = e, B()) : We.error("refreshGameState - system game not found")
+                                    t && 1 === t.length ? (t[0].systemGame = e, z()) : We.error("refreshGameState - system game not found")
                                 } else
                                     We.error("refreshGameState - game list undefined")
                             }
@@ -6275,7 +6275,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 angular.forEach(we.gamesFilters, function (e, t) {
                                     "favorite" === t && e === !0 ? De.filter.favorite = !0 : "hidden" === t && (De.filter.hidden = e)
                                 }),
-                                B()
+                                z()
                             }
                             function H() {
                                 De.gameList && (ke = De.gameList.length, Ge = a.size(a.filter(De.gameList, function (e) {
@@ -6286,7 +6286,7 @@ webpackJsonp([4], [function (e, t, n) {
                                                 favorite: !0
                                             })), Ve = a.size(a.filter(De.gameList, function (e) {
                                                 return e.systemGame && e.systemGame.isAnselReady
-                                            })), Be = a.size(a.filter(De.gameList, function (e) {
+                                            })), ze = a.size(a.filter(De.gameList, function (e) {
                                                 return e.systemGame && e.systemGame.isFreestyleReady
                                             })))
                             }
@@ -6300,7 +6300,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         var n = De.gameList[t].systemGame;
                                         De.gameList[t] = e,
                                         De.gameList[t].systemGame = n,
-                                        B()
+                                        z()
                                     } else
                                         We.error("refreshUserGame - user game not found");
                                     V()
@@ -6350,7 +6350,7 @@ webpackJsonp([4], [function (e, t, n) {
                             }
                             function ae() {
                                 !De.isAnselFeatureAvailable && De.matchFilter("anselReady") || !De.isFreestyleFeatureAvailable && De.matchFilter("freestyleReady") ? De.setFilter("all") : W(),
-                                z()
+                                B()
                             }
                             function le(e) {
                                 We.info("opsfeaturestatus update", e),
@@ -6372,7 +6372,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     }
                                 } else
                                     Ne = !0;
-                                z()
+                                B()
                             }
                             function ce() {
                                 De.topIndex = Ae ? Te.classicViewTopIndex : Te.topIndex,
@@ -6400,7 +6400,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 })
                             }
                             function fe() {
-                                ze && ze.data && ze.data.showBatteryBoostToast && r.getGameOpsSupported() && D.loadOOBEState().then(function (e) {
+                                Be && Be.data && Be.data.showBatteryBoostToast && r.getGameOpsSupported() && D.loadOOBEState().then(function (e) {
                                     e === C.COMPLETED_ALL ? De.optimizeGames() : We.info("Do not optimze explicitly while in OOBE flow through BB notification")
                                 })
                             }
@@ -6412,7 +6412,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 t.on(n.USERGAMES_UPDATED, se),
                                 t.on(n.USERGAME_UPDATED, j),
                                 t.on(n.GAMESTATE_UPDATED, $),
-                                t.on(n.GAMESTATE_INITIALIZED, B),
+                                t.on(n.GAMESTATE_INITIALIZED, z),
                                 t.on(p.SELECTED_GAME_CHANGED, oe),
                                 t.on(n.OPSFEATURE_UPDATED, le),
                                 t.on(A.INSTALL_DONE, ue),
@@ -6432,7 +6432,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 t.off(n.USERGAMES_UPDATED, se),
                                 t.off(n.USERGAME_UPDATED, j),
                                 t.off(n.GAMESTATE_UPDATED, $),
-                                t.off(n.GAMESTATE_INITIALIZED, B),
+                                t.off(n.GAMESTATE_INITIALIZED, z),
                                 t.off(n.GAMELIST_CREATED, fe),
                                 t.off(p.SELECTED_GAME_CHANGED, oe),
                                 t.off(n.OPSFEATURE_UPDATED, le),
@@ -6480,8 +6480,8 @@ webpackJsonp([4], [function (e, t, n) {
                             Fe = 0,
                             Ue = 0,
                             Ve = 0,
-                            Be = 0,
-                            ze = x.getCurrentStateParams(),
+                            ze = 0,
+                            Be = x.getCurrentStateParams(),
                             $e = null;
                             De.selectedGame = null,
                             De.gameList = null,
@@ -6544,7 +6544,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 return Ve
                             },
                             De.getFreestyleReadyGamesCount = function () {
-                                return Be
+                                return ze
                             },
                             De.getHiddenGamesCount = function () {
                                 return Fe
@@ -8257,8 +8257,8 @@ webpackJsonp([4], [function (e, t, n) {
                     interpolate: /<%=([\s\S]+?)%>/g,
                     escape: /<%-([\s\S]+?)%>/g
                 };
-                var B = /(.)^/,
-                z = {
+                var z = /(.)^/,
+                B = {
                     "'": "'",
                     "\\": "\\",
                     "\r": "r",
@@ -8268,12 +8268,12 @@ webpackJsonp([4], [function (e, t, n) {
                 },
                 $ = /\\|'|\r|\n|\u2028|\u2029/g,
                 W = function (e) {
-                    return "\\" + z[e]
+                    return "\\" + B[e]
                 };
                 _.template = function (e, t, n) {
                     !t && n && (t = n),
                     t = _.defaults({}, t, _.templateSettings);
-                    var r = RegExp([(t.escape || B).source, (t.interpolate || B).source, (t.evaluate || B).source].join("|") + "|$", "g"),
+                    var r = RegExp([(t.escape || z).source, (t.interpolate || z).source, (t.evaluate || z).source].join("|") + "|$", "g"),
                     i = 0,
                     o = "__p+='";
                     e.replace(r, function (t, n, r, a, l) {
@@ -8405,7 +8405,7 @@ webpackJsonp([4], [function (e, t, n) {
             u = r(c);
             n(114),
             n(374);
-            var d = a.ngMainModule.service("appService", ["$log", "$window", "$translate", "$translatePartialLoader", "$state", "$rootScope", "$interpolate", "eventAggregator", "gfeService", "cefService", "gfwslEndpoints", "gfservicesEndpoints", "oobeDialogService", "nodeService", "gfeUpdatesService", "updatesService", "socketService", "annotoriousService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "jarvisService", "dbService", "dbCacheService", "DB_NAMES", "GFECLIENT_CONFIG", "GFECLIENT_BUILD_INFO", "COMMON_EVENTS", "COMMON_EVENTS_VALUE", "COMMON_DEFAULT_STATES", "ANNOTATION_PROPERTIES", "GAME_EVENTS", "rewardsService", "hardwareService", "COMMON_ERRORS", "preferencesService", "gfeTargetService", "notificationsService", "weChatService", "gfeSearchService", "cevoToggleService", "gfeGeolocationService", "quietModeService", "BACKEND_STATE_SOCKET_EVENTS", "BACKEND_STATE_EVENTS", "preferencesFeatureService", "productTourService", "TELEMETRY_STATUS", "piiSanityService", "gfnCloudGamesService", "performanceModeService", "framerateLimiterService", "nisService", function (e, t, n, r, i, a, l, c, d, f, m, p, g, v, h, b, y, E, S, w, A, T, I, C, x, D, M, O, R, N, L, P, k, G, F, U, V, B, z, $, W, H, j, q, Y, K, Q, Z, X, J, ee, te) {
+            var d = a.ngMainModule.service("appService", ["$log", "$window", "$translate", "$translatePartialLoader", "$state", "$rootScope", "$interpolate", "eventAggregator", "gfeService", "cefService", "gfwslEndpoints", "gfservicesEndpoints", "oobeDialogService", "nodeService", "gfeUpdatesService", "updatesService", "socketService", "annotoriousService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "jarvisService", "dbService", "dbCacheService", "DB_NAMES", "GFECLIENT_CONFIG", "GFECLIENT_BUILD_INFO", "COMMON_EVENTS", "COMMON_EVENTS_VALUE", "COMMON_DEFAULT_STATES", "ANNOTATION_PROPERTIES", "GAME_EVENTS", "rewardsService", "hardwareService", "COMMON_ERRORS", "preferencesService", "gfeTargetService", "notificationsService", "weChatService", "gfeSearchService", "cevoToggleService", "gfeGeolocationService", "quietModeService", "BACKEND_STATE_SOCKET_EVENTS", "BACKEND_STATE_EVENTS", "preferencesFeatureService", "productTourService", "TELEMETRY_STATUS", "piiSanityService", "gfnCloudGamesService", "performanceModeService", "framerateLimiterService", "nisService", function (e, t, n, r, i, a, l, c, d, f, m, p, g, v, h, b, y, E, S, w, A, T, I, C, x, D, M, O, R, N, L, P, k, G, F, U, V, z, B, $, W, H, j, q, Y, K, Q, Z, X, J, ee, te) {
                             function ne(e, t, n, r, i) {
                                 return ve.debug("$stateChangeStart from state:", r.name, " to state:", t.name),
                                 "" === r.name || r.name.indexOf("main.updateHighlights") >= 0 || !(t.name.indexOf("main.auth") >= 0) || A.hasSession() ? r.name === t.name && _.isEqual(i, n) ? void e.preventDefault() : (r.nvEventNames && (S.endView(r.nvEventNames.viewTime, be[r.nvEventNames.viewTime.enumId]), delete be[r.nvEventNames.viewTime.enumId]), void(t.nvEventNames && (he[t.nvEventNames.loadTime.enumId] = S.startLoad(t.nvEventNames.loadTime)))) : (ve.error("$stateChangeStart: No valid session"), void e.preventDefault())
@@ -8573,8 +8573,8 @@ webpackJsonp([4], [function (e, t, n) {
                                 F.initialize(t),
                                 F.getNodeAddons(),
                                 Y.initialize(),
-                                B.initialize(),
-                                z.initialize(e.code, u.default),
+                                z.initialize(),
+                                B.initialize(e.code, u.default),
                                 $.initialize(),
                                 H.initialize(),
                                 te.initialize(),
@@ -8824,10 +8824,10 @@ webpackJsonp([4], [function (e, t, n) {
                         }).state("main.updateHighlights", {
                             url: "/update-highlights",
                             abstract: !1,
-                            onEnter: ["$log", "preferencesService", "$state", "gfeService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "$timeout", function (e, t, n, r, i, o, a) {
-                                    var l = e.getInstance("main/urlRouter/main.updateHighlights/onEnter");
-                                    l.debug("main.updateHighlights onEnter called"),
-                                    r.onlineState.online ? (l.debug("Release highlights shown"), i.push(o.GFE_UPDATE_LAUNCH_SHOW_HIGHLIGHTS), t.onShowReleaseHighlight(!0)) : (i.push(o.GFE_UPDATE_LAUNCH_USER_OFFLINE), l.debug("User offline. Release highlights not shown.")),
+                            onEnter: ["$log", "preferencesService", "$state", "gfeService", "telemetryService", "TELEMETRY_CRIMSON_EVENT_NAMES", "$timeout", "gamesService", function (e, t, n, r, i, o, a, l) {
+                                    var s = e.getInstance("main/urlRouter/main.updateHighlights/onEnter");
+                                    s.debug("main.updateHighlights onEnter called"),
+                                    r.onlineState.online ? (s.debug("Release highlights shown"), i.push(o.GFE_UPDATE_LAUNCH_SHOW_HIGHLIGHTS), t.onShowReleaseHighlight(!0), l.persistAutoOptimizeSettingOnSelfUpdate()) : (i.push(o.GFE_UPDATE_LAUNCH_USER_OFFLINE), s.debug("User offline. Release highlights not shown.")),
                                     a(function () {
                                         n.go("main.auth.home.gamesAndFriends")
                                     })
@@ -11807,12 +11807,12 @@ webpackJsonp([4], [function (e, t, n) {
             var l = a.ngMainCommonModule.service("quietModeService", ["$log", "quietModeEndpoints", "$q", "socketService", "eventAggregator", "QUIET_MODE_SOCKET_EVENTS", "QUIET_MODE_SERVICE_EVENTS", "QUIET_MODE_EVENTS", "COMMON_EVENTS", "BACKEND_STATE_EVENTS", "QUIET_MODE_2_SOCKET_EVENTS", "QUIET_MODE_2_SERVICE_EVENTS", "quietMode2Endpoints", function (e, t, n, r, i, a, l, s, c, u, d, f, m) {
                             function p(e) {
                                 return q.info("processSupportInfo response:", e),
-                                B = e.data,
+                                z = e.data,
                                 e.data
                             }
                             function g(e) {
                                 return q.info("processStateInfo response:", e),
-                                z = e.data,
+                                B = e.data,
                                 e.data
                             }
                             function v() {
@@ -11821,7 +11821,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     q.info("fetchSupportInfo cancelled"),
                                     e.reject()
                                 }, o.isNull(F)) {
-                                    B = null;
+                                    z = null;
                                     var r = t.support();
                                     F = r.then(p).catch(function (e) {
                                         return q.error("failed to get quietmode support info", e),
@@ -11839,7 +11839,7 @@ webpackJsonp([4], [function (e, t, n) {
                             }
                             function h() {
                                 if (o.isNull(U)) {
-                                    z = null;
+                                    B = null;
                                     var e = t.state();
                                     return U = e.then(g).catch(function (e) {
                                         return q.error("failed to get quietmode state info", e),
@@ -11849,13 +11849,13 @@ webpackJsonp([4], [function (e, t, n) {
                                 return U
                             }
                             function b(e) {
-                                return !e && B ? n.when(B) : v()
+                                return !e && z ? n.when(z) : v()
                             }
                             function y() {
-                                return z ? n.when(z) : h()
+                                return B ? n.when(B) : h()
                             }
                             function E(e) {
-                                z && (z.enabled = e)
+                                B && (B.enabled = e)
                             }
                             function S(e) {
                                 return t.setState({}, {
@@ -11885,7 +11885,7 @@ webpackJsonp([4], [function (e, t, n) {
                             function A() {
                                 q.info("onLanguageUpdated called"),
                                 F = null,
-                                z = null,
+                                B = null,
                                 v(),
                                 h(),
                                 $ = null,
@@ -12005,8 +12005,8 @@ webpackJsonp([4], [function (e, t, n) {
                             var F = null,
                             U = null,
                             V = this,
-                            B = null,
                             z = null,
+                            B = null,
                             $ = null,
                             W = null,
                             H = null,
@@ -13620,11 +13620,11 @@ webpackJsonp([4], [function (e, t, n) {
                             Z = e,
                             ee.info("Setting rewards feature enabled to: ", Z)
                         }
-                        function B(e) {
+                        function z(e) {
                             Q.shareLoaded = JSON.parse(e.shareAddonLoaded),
                             ee.info("Share node addon loaded event status: ", Q.shareLoaded)
                         }
-                        function z() {
+                        function B() {
                             A.checkSearchAvailability().then(function (e) {
                                 Q.searchEnabled = e
                             })
@@ -13638,13 +13638,13 @@ webpackJsonp([4], [function (e, t, n) {
                                 })) : Q.dropdownCollapseTimeout = 0
                         }
                         function W() {
-                            i.on(S.NODE_ADDONS_FETCHED, B),
+                            i.on(S.NODE_ADDONS_FETCHED, z),
                             i.on(o.LOGIN_STATUS_CHANGE, N),
                             i.on(o.SYSTEMINFO_UPDATED, G),
                             i.on(o.SHARE_STATUS_CHANGE_IN_PROGRESS, U),
                             i.on(o.OSC_READY, j),
                             i.on(b.FEATURE_STATUS_UPDATED, V),
-                            i.on(o.LOCALE_CHANGED, z),
+                            i.on(o.LOCALE_CHANGED, B),
                             i.on(o.USER_PROFILE_STATUS_UPDATED, $),
                             i.on(o.UNSUPPORTED_FEATURES_UPDATED, P),
                             i.on(o.ONLINE, L),
@@ -13657,7 +13657,7 @@ webpackJsonp([4], [function (e, t, n) {
                             N(),
                             L(),
                             k(),
-                            z()
+                            B()
                         }
                         function H() {
                             Q.isShareButtonClicked = !1,
@@ -13690,13 +13690,13 @@ webpackJsonp([4], [function (e, t, n) {
                             Q.userProfileEnabled ? Q.displayUserProfile(D.REWARDS_TAB) : y.go(R.REWARDS)
                         }
                         function K() {
-                            i.off(S.NODE_ADDONS_FETCHED, B),
+                            i.off(S.NODE_ADDONS_FETCHED, z),
                             i.off(o.LOGIN_STATUS_CHANGE, N),
                             i.off(o.SYSTEMINFO_UPDATED, G),
                             i.off(o.OSC_READY, j),
                             i.off(o.SHARE_STATUS_CHANGE_IN_PROGRESS, U),
                             i.off(b.FEATURE_STATUS_UPDATED, V),
-                            i.off(o.LOCALE_CHANGED, z),
+                            i.off(o.LOCALE_CHANGED, B),
                             i.off(o.USER_PROFILE_STATUS_UPDATED, $),
                             i.off(o.ONLINE, L)
                         }
@@ -15262,8 +15262,8 @@ webpackJsonp([4], [function (e, t, n) {
                             }
                             function S() {
                                 var e = angular.element(r[0].querySelector(".games-custom-ops"));
-                                B = angular.element(e[0].querySelector(".optimal-button-container")),
-                                z = angular.element(e[0].querySelector(".optimal-value-button")),
+                                z = angular.element(e[0].querySelector(".optimal-button-container")),
+                                B = angular.element(e[0].querySelector(".optimal-value-button")),
                                 $ = angular.element(e[0].querySelector(".optimal-line-indicator"));
                                 var t = angular.element(r[0].querySelector(".games-game-optimization"))[0],
                                 n = i.getComputedStyle(t).getPropertyValue("margin-left"),
@@ -15284,16 +15284,16 @@ webpackJsonp([4], [function (e, t, n) {
                             }
                             function _() {
                                 if (null === U.optimalSliderIndex || 0 === U.maxIndex)
-                                    B.addClass("hidden");
+                                    z.addClass("hidden");
                                 else {
                                     var e = W[0].clientWidth / (U.maxIndex - K),
                                     t = U.optimalSliderIndex * e + 33,
-                                    n = z[0].offsetWidth / 2,
+                                    n = B[0].offsetWidth / 2,
                                     r = t - n;
-                                    r < 0 ? r = 0 : r + z[0].offsetWidth > 452 && (r = 452 - z[0].offsetWidth),
-                                    z.css("left", Math.round(r) + "px"),
+                                    r < 0 ? r = 0 : r + B[0].offsetWidth > 452 && (r = 452 - B[0].offsetWidth),
+                                    B.css("left", Math.round(r) + "px"),
                                     $.css("left", Math.round(t) + "px"),
-                                    B.removeClass("hidden")
+                                    z.removeClass("hidden")
                                 }
                             }
                             function w() {
@@ -15422,8 +15422,8 @@ webpackJsonp([4], [function (e, t, n) {
                             var F,
                             U = this,
                             V = null,
-                            B = null,
                             z = null,
+                            B = null,
                             $ = null,
                             W = null,
                             H = null,
@@ -15530,7 +15530,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 V.css("display", "block"),
                                 V.css("z-index", "0"),
                                 W = angular.element(e[0].querySelector(".md-track-container")),
-                                B = angular.element(e[0].querySelector(".optimal-button-container")),
+                                z = angular.element(e[0].querySelector(".optimal-button-container")),
                                 S(),
                                 D(),
                                 x(),
@@ -16008,10 +16008,10 @@ webpackJsonp([4], [function (e, t, n) {
                             function V(e) {
                                 e.id === Z.nvSystemGame.id && (Z.nvSystemGame = e, Z.getGameState(), Z.updateCurrentSettingHeader())
                             }
-                            function B(e) {
+                            function z(e) {
                                 e.id === Z.nvSystemGame.id && (J = e.data, R())
                             }
-                            function z(e) {
+                            function B(e) {
                                 e === Z.nvSystemGame.id && (K && (K.cancel(), K = null), Q && (Q.cancel(), Q = null), M(), O())
                             }
                             function $() {
@@ -16028,8 +16028,8 @@ webpackJsonp([4], [function (e, t, n) {
                             function H() {
                                 l.on(s.GAMESTATE_UPDATED, V),
                                 l.on(s.VOPS_POPUP_SHOWN, re),
-                                l.on(s.SETTINGS_TRANSLATION_FINISHED, B),
-                                l.on(s.SETTINGS_TRANSLATION_FAILED, z),
+                                l.on(s.SETTINGS_TRANSLATION_FINISHED, z),
+                                l.on(s.SETTINGS_TRANSLATION_FAILED, B),
                                 l.on(s.GAMEVOPSITEM_UNMATCHED, F),
                                 l.on(s.GAMEVOPSITEM_MATCHED, U),
                                 l.on(s.GAMEVOPS_FINISHED, $),
@@ -16081,8 +16081,8 @@ webpackJsonp([4], [function (e, t, n) {
                             function Y() {
                                 l.off(s.GAMESTATE_UPDATED, V),
                                 l.off(s.VOPS_POPUP_SHOWN, re),
-                                l.off(s.SETTINGS_TRANSLATION_FINISHED, B),
-                                l.off(s.SETTINGS_TRANSLATION_FAILED, z),
+                                l.off(s.SETTINGS_TRANSLATION_FINISHED, z),
+                                l.off(s.SETTINGS_TRANSLATION_FAILED, B),
                                 l.off(s.GAMEVOPSITEM_UNMATCHED, F),
                                 l.off(s.GAMEVOPSITEM_MATCHED, U),
                                 l.off(s.GAMEVOPS_FINISHED, $),
@@ -21760,8 +21760,7 @@ webpackJsonp([4], [function (e, t, n) {
                             function g() {
                                 var e = i("translate")("l10n.ExpFeatureUpdatesDisabled"),
                                 t = "error_outline";
-                                1 == C.clientBetaUpdateEnabled && (e = i("translate")("l10n.ExpFeatureUpdatesEnabled"),
-                                    t = "check"),
+                                1 == C.clientBetaUpdateEnabled && (e = i("translate")("l10n.ExpFeatureUpdatesEnabled"), t = "check"),
                                 h(e, t)
                             }
                             function v() {
@@ -24489,7 +24488,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     $(r, n, F)
                                 }
                             }
-                            function B() {
+                            function z() {
                                 m.push(p.REWARDS_REDEMPTION_PORTAL_CLOSE, {
                                     couponCode: pe.couponCode || ""
                                 }),
@@ -24498,9 +24497,9 @@ webpackJsonp([4], [function (e, t, n) {
                                 Ce ? Ce = !1 : Ie ? (Ie = !1, q().then(function (e) {
                                             G(V)
                                         })) : Te ? Te = !1 : G(V),
-                                a.off(c.CHILD_WINDOW_CLOSED, B)
+                                a.off(c.CHILD_WINDOW_CLOSED, z)
                             }
-                            function z() {
+                            function B() {
                                 xe || De || !e.getRewardsTabSelected() || (De = u.showProgress({
                                         textContent: t("translate")("l10n.updatingContent")
                                     }).finally(function () {
@@ -24560,7 +24559,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     xe = !0,
                                     oe()
                                 }),
-                                T(z),
+                                T(B),
                                 n.promise
                             }
                             function q() {
@@ -24718,7 +24717,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         ee(e.entitlementUrl, n)
                                     } else
                                         i === R.AVAILABLE_REWARD && te(Oe), ee(e.entitlementUrl, "");
-                                    a.on(c.CHILD_WINDOW_CLOSED, B),
+                                    a.on(c.CHILD_WINDOW_CLOSED, z),
                                     k(!1),
                                     Ie = !0
                                 }).catch(function (e) {
@@ -24768,7 +24767,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 se(t) && (e.clearCachedRewards(), Ie = !0),
                                 Ae = t.entitlementId,
                                 ee(t.entitlementUrl, ""),
-                                a.on(c.CHILD_WINDOW_CLOSED, B)
+                                a.on(c.CHILD_WINDOW_CLOSED, z)
                             }
                             function se(e) {
                                 var t = e.campaign.rules.maxselect;
@@ -24800,14 +24799,14 @@ webpackJsonp([4], [function (e, t, n) {
                                 a.on(l.REWARDS_UPDATED, q),
                                 a.on(l.REWARD_NOTIFICATION_CLICKED, de),
                                 a.on(c.USER_PROFILE_STATUS_UPDATED, fe),
-                                a.on(M.PROFILE_TAB_CHANGED, z),
+                                a.on(M.PROFILE_TAB_CHANGED, B),
                                 f.$on("$destroy", function () {
-                                    a.off(c.CHILD_WINDOW_CLOSED, B),
+                                    a.off(c.CHILD_WINDOW_CLOSED, z),
                                     a.off(l.REWARD_REDEEM_CLICKED, ae),
                                     a.off(l.REWARDS_UPDATED, q),
                                     a.off(l.REWARD_NOTIFICATION_CLICKED, de),
                                     a.off(c.USER_PROFILE_STATUS_UPDATED, fe),
-                                    a.off(M.PROFILE_TAB_CHANGED, z),
+                                    a.off(M.PROFILE_TAB_CHANGED, B),
                                     Se && (A.cancel(Se), Se = null),
                                     _e && (A.cancel(_e), _e = null)
                                 }),
@@ -25996,7 +25995,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 } else
                                     le.installedDriverHeaderText = ""
                             }
-                            function B(e) {
+                            function z(e) {
                                 o.getUpdateDetails().then(function (e) {
                                     if (we && (!le.driverUpdateList || e && e[0] && le.driverUpdateList[0] && (le.driverUpdateList[0].isCRD !== e[0].isCRD || le.driverUpdateList[0].version !== e[0].version))) {
                                         var t = JSON.parse(le.currentlySelectedDriver) === le.driverType.GRD ? "l10n.newGRDDriverAvailable" : "l10n.newCRDDriverAvailable";
@@ -26032,7 +26031,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     fe.info("refreshAvailableUpdates finally OUT")
                                 })
                             }
-                            function z(e) {
+                            function B(e) {
                                 S.show({
                                     textContent: e,
                                     icon: "error_outline"
@@ -26056,7 +26055,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 le.refreshUI()
                             }
                             function H() {
-                                le.updateState === s && o.canCheckForUpdate() && a.isNull(ve) ? o.checkForUpdates() : o.scanCompleted && a.isNull(ve) ? (fe.info("scan completed, refreshing state"), B()) : o.manualCheckForUpdate && !o.scanCompleted && a.isNull(ve) && (S.showProgress({
+                                le.updateState === s && o.canCheckForUpdate() && a.isNull(ve) ? o.checkForUpdates() : o.scanCompleted && a.isNull(ve) ? (fe.info("scan completed, refreshing state"), z()) : o.manualCheckForUpdate && !o.scanCompleted && a.isNull(ve) && (S.showProgress({
                                         textContent: r("translate")("l10n.checkingforUpdates")
                                     }), we = !0)
                             }
@@ -26119,7 +26118,7 @@ webpackJsonp([4], [function (e, t, n) {
                             }
                             function te() {
                                 we = !1,
-                                z(de("l10n.unableToConnectToNvidia")),
+                                B(de("l10n.unableToConnectToNvidia")),
                                 _e = ye.FAILED
                             }
                             function ne() {
@@ -26128,11 +26127,11 @@ webpackJsonp([4], [function (e, t, n) {
                             function re(e) {
                                 var t = le.installedDriver && le.installedDriver.downloadStatus.taskId == e.taskId;
                                 if (t && (le.installedDriver.reInstalledDriver = !1), e.status === n.TASK_PAUSED_UNABLE_TO_REACH_SERVER)
-                                    z(de("l10n.downloadPausedUnableToReachNvidia")), t && (le.installedDriver.reInstalledDriver = !0);
+                                    B(de("l10n.downloadPausedUnableToReachNvidia")), t && (le.installedDriver.reInstalledDriver = !0);
                                 else if (e.status === n.TASK_CHECK_SUM_ERROR || e.status === n.TASK_SIGNATURE_VERIFICATION_FAILS)
-                                    z(de("l10n.driverDownloadFailed"));
+                                    B(de("l10n.driverDownloadFailed"));
                                 else if (e.status === n.TASK_FAILED_UNABLE_TO_REACH_SERVER)
-                                    z(de("l10n.unableToConnectToNvidia"));
+                                    B(de("l10n.unableToConnectToNvidia"));
                                 else if (e.status === n.TASK_DISK_WRITE_FAIL) {
                                     var i = r("convertBytesToKBMBGB")(e.totalBytes);
                                     if (e.downloadedLocation.length > 0) {
@@ -26142,7 +26141,7 @@ webpackJsonp([4], [function (e, t, n) {
                                             value: i,
                                             drive: o
                                         });
-                                        z(a)
+                                        B(a)
                                     }
                                 }
                             }
@@ -26219,7 +26218,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         e.downloadStatus = t.data
                                     }).catch(function (t) {
                                         fe.error("download failed to start", t),
-                                        z(de("l10n.driverDownloadFailed")),
+                                        B(de("l10n.driverDownloadFailed")),
                                         le.installedDriver && le.installedDriver.version === e.version && (le.installedDriver.reInstalledDriver = !1),
                                         null === e.version && (e.version = "unknown"),
                                         g.push(v.UPDATES_DOWNLOAD_DRIVER_FAILED, e.version)
@@ -26301,7 +26300,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 })
                             },
                             le.refreshUI = function () {
-                                B(le.updateDriverExpandedState)
+                                z(le.updateDriverExpandedState)
                             },
                             le.updateState = l.params.updateState,
                             ve = l.params.resumeDriverInstallation,
@@ -28954,13 +28953,13 @@ webpackJsonp([4], [function (e, t, n) {
                                 O(e, F.updateCover, y.TOAST_CLICKED_REUPLOAD_COVER)
                             }
                             function L(e) {
-                                z && (I.cancel(), z = !1, I.show({
+                                B && (I.cancel(), B = !1, I.show({
                                         icon: "check_circle",
                                         textContent: C("translate")("l10n.verificationSuccessfull")
                                     }))
                             }
                             function P(e) {
-                                B && (I.cancel(), B = !1, I.show({
+                                z && (I.cancel(), z = !1, I.show({
                                         icon: "check_circle",
                                         textContent: C("translate")("l10n.verificationSuccessfull")
                                     }))
@@ -28993,8 +28992,8 @@ webpackJsonp([4], [function (e, t, n) {
                             var F = this,
                             U = m.getLoggedInUser(),
                             V = !1,
-                            B = !1,
                             z = !1,
+                            B = !1,
                             $ = n.getInstance("main.userProfile/userProfileController"),
                             W = 500,
                             H = {
@@ -29040,7 +29039,7 @@ webpackJsonp([4], [function (e, t, n) {
                             F.updateAvatar = function () {
                                 return f.getAvatarUploadInProgress() ? (I.showProgress({
                                         textContent: C("translate")("l10n.verificationOfUploadInProgress")
-                                    }), void(z = !0)) : void u.show("nv-edit-avatar")
+                                    }), void(B = !0)) : void u.show("nv-edit-avatar")
                             },
                             F.getFeatureEnabled = f.getFeatureEnabled,
                             F.updateCoverImage = function (e) {
@@ -29055,7 +29054,7 @@ webpackJsonp([4], [function (e, t, n) {
                             F.updateCover = function () {
                                 return f.getCoverUploadInProgress() ? (I.showProgress({
                                         textContent: C("translate")("l10n.verificationOfUploadInProgress")
-                                    }), void(B = !0)) : r.show({
+                                    }), void(z = !0)) : r.show({
                                     controller: "EditProfileCoverController",
                                     controllerAs: "editProfileCover",
                                     template: s.default,
@@ -30307,7 +30306,7 @@ webpackJsonp([4], [function (e, t, n) {
                         r ? (t.lastIndex = 0, t.test(i) || n.setAttribute("class", k(i + " " + e))) : n.setAttribute("class", k(i.replace(t, " ")))
                     }
                 }
-                function B(e, t, n) {
+                function z(e, t, n) {
                     function r() {
                         this.style.removeProperty(e)
                     }
@@ -30320,7 +30319,7 @@ webpackJsonp([4], [function (e, t, n) {
                     }
                     return null == t ? r : "function" == typeof t ? o : i
                 }
-                function z(e, t) {
+                function B(e, t) {
                     function n() {
                         delete this[e]
                     }
@@ -30743,7 +30742,7 @@ webpackJsonp([4], [function (e, t, n) {
                         symbol: e
                     }
                 }
-                function Be(e) {
+                function ze(e) {
                     var t = e.decimal,
                     n = e.thousands,
                     r = e.grouping,
@@ -30803,7 +30802,7 @@ webpackJsonp([4], [function (e, t, n) {
                         "$" === s && (g = i[0], v = i[1]),
                         "r" != m || f || (m = "g"),
                         null != f && ("g" == m ? f = Math.max(1, Math.min(21, f)) : "e" != m && "f" != m || (f = Math.max(0, Math.min(20, f)))),
-                        m = ul.get(m) || ze;
+                        m = ul.get(m) || Be;
                         var y = c && d;
                         return function (e) {
                             var n = v;
@@ -30835,7 +30834,7 @@ webpackJsonp([4], [function (e, t, n) {
                         }
                     }
                 }
-                function ze(e) {
+                function Be(e) {
                     return e + ""
                 }
                 function $e() {
@@ -31601,7 +31600,7 @@ webpackJsonp([4], [function (e, t, n) {
                 function Vt(e, t) {
                     return ((e = e.x)[0] < 0 ? e[1] - Fa - Na : Fa - e[1]) - ((t = t.x)[0] < 0 ? t[1] - Fa - Na : Fa - t[1])
                 }
-                function Bt(e) {
+                function zt(e) {
                     var t,
                     n = NaN,
                     r = NaN,
@@ -31614,7 +31613,7 @@ webpackJsonp([4], [function (e, t, n) {
                         point: function (o, a) {
                             var l = o > 0 ? Pa : -Pa,
                             s = ha(o - n);
-                            ha(s - Pa) < Na ? (e.point(n, r = (r + a) / 2 > 0 ? Fa : -Fa), e.point(i, r), e.lineEnd(), e.lineStart(), e.point(l, r), e.point(o, r), t = 0) : i !== l && s >= Pa && (ha(n - i) < Na && (n -= i * Na), ha(o - l) < Na && (o -= l * Na), r = zt(n, r, o, a), e.point(i, r), e.lineEnd(), e.lineStart(), e.point(l, r), t = 0),
+                            ha(s - Pa) < Na ? (e.point(n, r = (r + a) / 2 > 0 ? Fa : -Fa), e.point(i, r), e.lineEnd(), e.lineStart(), e.point(l, r), e.point(o, r), t = 0) : i !== l && s >= Pa && (ha(n - i) < Na && (n -= i * Na), ha(o - l) < Na && (o -= l * Na), r = Bt(n, r, o, a), e.point(i, r), e.lineEnd(), e.lineStart(), e.point(l, r), t = 0),
                             e.point(n = o, r = a),
                             i = l
                         },
@@ -31627,7 +31626,7 @@ webpackJsonp([4], [function (e, t, n) {
                         }
                     }
                 }
-                function zt(e, t, n, r) {
+                function Bt(e, t, n, r) {
                     var i,
                     o,
                     a = Math.sin(e - n);
@@ -32004,8 +32003,8 @@ webpackJsonp([4], [function (e, t, n) {
                 }
                 function Zt(e, t) {
                     e < Vl && (Vl = e),
-                    e > zl && (zl = e),
-                    t < Bl && (Bl = t),
+                    e > Bl && (Bl = e),
+                    t < zl && (zl = t),
                     t > $l && ($l = t)
                 }
                 function Xt() {
@@ -32620,12 +32619,12 @@ webpackJsonp([4], [function (e, t, n) {
                     lr(this),
                     this.edge = this.site = this.circle = null
                 }
-                function Bn(e) {
+                function zn(e) {
                     var t = as.pop() || new Vn;
                     return t.site = e,
                     t
                 }
-                function zn(e) {
+                function Bn(e) {
                     Xn(e),
                     rs.remove(e),
                     as.push(e),
@@ -32642,13 +32641,13 @@ webpackJsonp([4], [function (e, t, n) {
                     o = e.P,
                     a = e.N,
                     l = [e];
-                    zn(e);
+                    Bn(e);
                     for (var s = o; s.circle && ha(n - s.circle.x) < Na && ha(r - s.circle.cy) < Na; )
-                        o = s.P, l.unshift(s), zn(s), s = o;
+                        o = s.P, l.unshift(s), Bn(s), s = o;
                     l.unshift(s),
                     Xn(s);
                     for (var c = a; c.circle && ha(n - c.circle.x) < Na && ha(r - c.circle.cy) < Na; )
-                        a = c.N, l.push(c), zn(c), c = a;
+                        a = c.N, l.push(c), Bn(c), c = a;
                     l.push(c),
                     Xn(c);
                     var u,
@@ -32676,10 +32675,10 @@ webpackJsonp([4], [function (e, t, n) {
                             }
                             l = l.R
                         }
-                    var s = Bn(e);
+                    var s = zn(e);
                     if (rs.insert(t, s), t || n) {
                         if (t === n)
-                            return Xn(t), n = Bn(t.site), rs.insert(s, n), s.edge = n.edge = nr(t.site, s.site), Zn(t), void Zn(n);
+                            return Xn(t), n = zn(t.site), rs.insert(s, n), s.edge = n.edge = nr(t.site, s.site), Zn(t), void Zn(n);
                         if (!n)
                             return void(s.edge = nr(t.site, s.site));
                         Xn(t),
@@ -33273,13 +33272,13 @@ webpackJsonp([4], [function (e, t, n) {
                         return he(n + o * e, r + a * e, i + l * e) + ""
                     }
                 }
-                function Br(e, t) {
+                function zr(e, t) {
                     return t -= e,
                     function (n) {
                         return Math.round(e + t * n)
                     }
                 }
-                function zr(e) {
+                function Br(e) {
                     var t = [e.a, e.b],
                     n = [e.c, e.d],
                     r = Wr(t),
@@ -33635,7 +33634,7 @@ webpackJsonp([4], [function (e, t, n) {
                         dy: e.dy
                     }
                 }
-                function Bi(e, t) {
+                function zi(e, t) {
                     var n = e.x + t[3],
                     r = e.y + t[0],
                     i = e.dx - t[1] - t[3],
@@ -33648,13 +33647,13 @@ webpackJsonp([4], [function (e, t, n) {
                         dy: o
                     }
                 }
-                function zi(e) {
+                function Bi(e) {
                     var t = e[0],
                     n = e[e.length - 1];
                     return t < n ? [t, n] : [n, t]
                 }
                 function $i(e) {
-                    return e.rangeExtent ? e.rangeExtent() : zi(e.range())
+                    return e.rangeExtent ? e.rangeExtent() : Bi(e.range())
                 }
                 function Wi(e, t, n, r) {
                     var i = n(e[0], e[1]),
@@ -33720,7 +33719,7 @@ webpackJsonp([4], [function (e, t, n) {
                         return arguments.length ? (t = e, i()) : t
                     },
                     o.rangeRound = function (e) {
-                        return o.range(e).interpolate(Br)
+                        return o.range(e).interpolate(zr)
                     },
                     o.clamp = function (e) {
                         return arguments.length ? (r = e, i()) : r
@@ -33751,7 +33750,7 @@ webpackJsonp([4], [function (e, t, n) {
                 }
                 function Zi(e, t) {
                     null == t && (t = 10);
-                    var n = zi(e),
+                    var n = Bi(e),
                     r = n[1] - n[0],
                     i = Math.pow(10, Math.floor(Math.log(r / t) / Math.LN10)),
                     o = t / r * i;
@@ -33816,7 +33815,7 @@ webpackJsonp([4], [function (e, t, n) {
                         a
                     },
                     a.ticks = function () {
-                        var e = zi(r),
+                        var e = Bi(r),
                         a = [],
                         l = e[0],
                         s = e[1],
@@ -33978,7 +33977,7 @@ webpackJsonp([4], [function (e, t, n) {
                         return a
                     },
                     n.rangeExtent = function () {
-                        return zi(t.a[0])
+                        return Bi(t.a[0])
                     },
                     n.copy = function () {
                         return oo(e, t)
@@ -34295,7 +34294,7 @@ webpackJsonp([4], [function (e, t, n) {
                         t = e[i], n = t[0], r = t[1] - Fa, t[0] = n * Math.cos(r), t[1] = n * Math.sin(r);
                     return e
                 }
-                function Bo(e) {
+                function zo(e) {
                     function t(t) {
                         function s() {
                             g.push("M", l(e(h), d), u, c(e(v.reverse()), d), "Z")
@@ -34350,7 +34349,7 @@ webpackJsonp([4], [function (e, t, n) {
                     },
                     t
                 }
-                function zo(e) {
+                function Bo(e) {
                     return e.radius
                 }
                 function $o(e) {
@@ -34501,7 +34500,7 @@ webpackJsonp([4], [function (e, t, n) {
                             return !isNaN(n) && !e.range(n, ia(+n + 1), t).length
                         }
                         var o = r.domain(),
-                        a = zi(o),
+                        a = Bi(o),
                         l = null == e ? i(a, 10) : "number" == typeof e && i(a, e);
                         return l && (e = l[0], t = l[1]),
                         r.domain(Hi(o, t > 1 ? {
@@ -34519,7 +34518,7 @@ webpackJsonp([4], [function (e, t, n) {
                                  : e))
                     },
                     r.ticks = function (e, t) {
-                        var n = zi(r.domain()),
+                        var n = Bi(r.domain()),
                         o = null == e ? i(n, 10) : "number" == typeof e ? i(n, e) : !e.range && [{
                                     range: e
                                 }, t];
@@ -35089,7 +35088,7 @@ webpackJsonp([4], [function (e, t, n) {
                         if ("string" != typeof e) {
                             r < 2 && (t = "");
                             for (n in e)
-                                this.each(B(n, e[n], t));
+                                this.each(z(n, e[n], t));
                             return this
                         }
                         if (r < 2) {
@@ -35098,17 +35097,17 @@ webpackJsonp([4], [function (e, t, n) {
                         }
                         n = ""
                     }
-                    return this.each(B(e, t, n))
+                    return this.each(z(e, t, n))
                 },
                 Ia.property = function (e, t) {
                     if (arguments.length < 2) {
                         if ("string" == typeof e)
                             return this.node()[e];
                         for (t in e)
-                            this.each(z(t, e[t]));
+                            this.each(B(t, e[t]));
                         return this
                     }
-                    return this.each(z(e, t))
+                    return this.each(B(e, t))
                 },
                 Ia.text = function (e) {
                     return arguments.length ? this.each("function" == typeof e ? function () {
@@ -35400,18 +35399,18 @@ webpackJsonp([4], [function (e, t, n) {
                 Fa = Pa / 2,
                 Ua = Pa / 180,
                 Va = 180 / Pa,
-                Ba = Math.SQRT2,
-                za = 2,
+                za = Math.SQRT2,
+                Ba = 2,
                 $a = 4;
                 la.interpolateZoom = function (e, t) {
                     function n(e) {
                         var t = e * b;
                         if (h) {
                             var n = se(g),
-                            a = o / (za * f) * (n * ce(Ba * t + g) - le(g));
-                            return [r + a * c, i + a * u, o * n / se(Ba * t + g)]
+                            a = o / (Ba * f) * (n * ce(za * t + g) - le(g));
+                            return [r + a * c, i + a * u, o * n / se(za * t + g)]
                         }
-                        return [r + e * c, i + e * u, o * Math.exp(Ba * t)]
+                        return [r + e * c, i + e * u, o * Math.exp(za * t)]
                     }
                     var r = e[0],
                     i = e[1],
@@ -35423,12 +35422,12 @@ webpackJsonp([4], [function (e, t, n) {
                     u = l - i,
                     d = c * c + u * u,
                     f = Math.sqrt(d),
-                    m = (s * s - o * o + $a * d) / (2 * o * za * f),
-                    p = (s * s - o * o - $a * d) / (2 * s * za * f),
+                    m = (s * s - o * o + $a * d) / (2 * o * Ba * f),
+                    p = (s * s - o * o - $a * d) / (2 * s * Ba * f),
                     g = Math.log(Math.sqrt(m * m + 1) - m),
                     v = Math.log(Math.sqrt(p * p + 1) - p),
                     h = v - g,
-                    b = (h || Math.log(s / o)) / Ba;
+                    b = (h || Math.log(s / o)) / za;
                     return n.duration = 1e3 * b,
                     n
                 },
@@ -36225,7 +36224,7 @@ webpackJsonp([4], [function (e, t, n) {
                 vl = /^%/;
                 la.locale = function (e) {
                     return {
-                        numberFormat: Be(e),
+                        numberFormat: ze(e),
                         timeFormat: je(e)
                     }
                 };
@@ -36479,7 +36478,7 @@ webpackJsonp([4], [function (e, t, n) {
                         Pl.lineStart = Dt
                     }
                 },
-                kl = Gt(Nt, Bt, $t, [-Pa, -Pa / 2]),
+                kl = Gt(Nt, zt, $t, [-Pa, -Pa / 2]),
                 Gl = 1e9;
                 la.geo.clipExtent = function () {
                     var e,
@@ -36594,8 +36593,8 @@ webpackJsonp([4], [function (e, t, n) {
                 var Fl,
                 Ul,
                 Vl,
-                Bl,
                 zl,
+                Bl,
                 $l,
                 Wl = {
                     point: I,
@@ -36656,9 +36655,9 @@ webpackJsonp([4], [function (e, t, n) {
                         Ll ? [Rl / Ll, Nl / Ll] : Ol ? [Dl / Ol, Ml / Ol] : xl ? [Il / xl, Cl / xl] : [NaN, NaN]
                     },
                     e.bounds = function (e) {
-                        return zl = $l =  - (Vl = Bl = 1 / 0),
+                        return Bl = $l =  - (Vl = zl = 1 / 0),
                         la.geo.stream(e, i(Hl)),
-                        [[Vl, Bl], [zl, $l]]
+                        [[Vl, zl], [Bl, $l]]
                     },
                     e.projection = function (e) {
                         return arguments.length ? (i = (n = e) ? e.stream || ln(e) : w, t()) : n
@@ -37298,7 +37297,7 @@ webpackJsonp([4], [function (e, t, n) {
                 la.interpolateHcl = Fr,
                 la.interpolateHsl = Ur,
                 la.interpolateLab = Vr,
-                la.interpolateRound = Br,
+                la.interpolateRound = zr,
                 la.transform = function (e) {
                     var t = ua.createElementNS(la.ns.prefix.svg, "g");
                     return (la.transform = function (e) {
@@ -37306,10 +37305,10 @@ webpackJsonp([4], [function (e, t, n) {
                             t.setAttribute("transform", e);
                             var n = t.transform.baseVal.consolidate()
                         }
-                        return new zr(n ? n.matrix : ps)
+                        return new Br(n ? n.matrix : ps)
                     })(e)
                 },
-                zr.prototype.toString = function () {
+                Br.prototype.toString = function () {
                     return "translate(" + this.translate + ")rotate(" + this.rotate + ")skewX(" + this.skew + ")scale(" + this.scale + ")"
                 };
                 var ps = {
@@ -38181,10 +38180,10 @@ webpackJsonp([4], [function (e, t, n) {
                     o.padding = function (e) {
                         function t(t) {
                             var n = e.call(o, t, t.depth);
-                            return null == n ? Vi(t) : Bi(t, "number" == typeof n ? [n, n, n, n] : n)
+                            return null == n ? Vi(t) : zi(t, "number" == typeof n ? [n, n, n, n] : n)
                         }
                         function n(t) {
-                            return Bi(t, e)
+                            return zi(t, e)
                         }
                         if (!arguments.length)
                             return u;
@@ -38373,9 +38372,9 @@ webpackJsonp([4], [function (e, t, n) {
                             U = Math.sqrt(N[0] * N[0] + N[1] * N[1]);
                             if (null != E) {
                                 var V = Math.min(p, (c - U) / (F + 1)),
-                                B = bo(null == A ? [_, w] : [A, T], [b, y], c, V, m),
-                                z = bo([E, S], [_, w], c, V, m);
-                                p === V ? x.push("M", B[0], "A", V, ",", V, " 0 0,", g, " ", B[1], "A", c, ",", c, " 0 ", 1 - m ^ ho(B[1][0], B[1][1], z[1][0], z[1][1]), ",", m, " ", z[1], "A", V, ",", V, " 0 0,", g, " ", z[0]) : x.push("M", B[0], "A", V, ",", V, " 0 1,", g, " ", z[0])
+                                z = bo(null == A ? [_, w] : [A, T], [b, y], c, V, m),
+                                B = bo([E, S], [_, w], c, V, m);
+                                p === V ? x.push("M", z[0], "A", V, ",", V, " 0 0,", g, " ", z[1], "A", c, ",", c, " 0 ", 1 - m ^ ho(z[1][0], z[1][1], B[1][0], B[1][1]), ",", m, " ", B[1], "A", V, ",", V, " 0 0,", g, " ", B[0]) : x.push("M", z[0], "A", V, ",", V, " 0 1,", g, " ", B[0])
                             } else
                                 x.push("M", b, ",", y);
                             if (null != A) {
@@ -38465,10 +38464,10 @@ webpackJsonp([4], [function (e, t, n) {
                 wo.reverse = Ao,
                 Ao.reverse = wo,
                 la.svg.area = function () {
-                    return Bo(w)
+                    return zo(w)
                 },
                 la.svg.area.radial = function () {
-                    var e = Bo(Vo);
+                    var e = zo(Vo);
                     return e.radius = e.x,
                     delete e.x,
                     e.innerRadius = e.x0,
@@ -38513,7 +38512,7 @@ webpackJsonp([4], [function (e, t, n) {
                     }
                     var o = wn,
                     a = An,
-                    l = zo,
+                    l = Bo,
                     s = po,
                     c = go;
                     return e.radius = function (t) {
@@ -38615,7 +38614,7 @@ webpackJsonp([4], [function (e, t, n) {
                 var Ps = Math.sqrt(3),
                 ks = Math.tan(30 * Ua);
                 Ia.transition = function (e) {
-                    for (var t, n, r = Gs || ++Bs, i = Xo(e), o = [], a = Fs || {
+                    for (var t, n, r = Gs || ++zs, i = Xo(e), o = [], a = Fs || {
                             time: Date.now(),
                             ease: Mr,
                             delay: 0,
@@ -38634,7 +38633,7 @@ webpackJsonp([4], [function (e, t, n) {
                 Fs,
                 Us = Yo(Xo()),
                 Vs = [],
-                Bs = 0;
+                zs = 0;
                 Vs.call = Ia.call,
                 Vs.empty = Ia.empty,
                 Vs.node = Ia.node,
@@ -38848,7 +38847,7 @@ webpackJsonp([4], [function (e, t, n) {
                     return this
                 },
                 Vs.transition = function () {
-                    for (var e, t, n, r, i = this.id, o = ++Bs, a = this.namespace, l = [], s = 0, c = this.length; s < c; s++) {
+                    for (var e, t, n, r, i = this.id, o = ++zs, a = this.namespace, l = [], s = 0, c = this.length; s < c; s++) {
                         l.push(e = []);
                         for (var t = this[s], u = 0, d = t.length; u < d; u++)
                             (n = t[u]) && (r = n[a][i], Jo(n, u, a, o, {
@@ -38903,7 +38902,7 @@ webpackJsonp([4], [function (e, t, n) {
                     }
                     var t,
                     n = la.scale.linear(),
-                    r = zs,
+                    r = Bs,
                     i = 6,
                     o = 6,
                     a = 3,
@@ -38913,7 +38912,7 @@ webpackJsonp([4], [function (e, t, n) {
                         return arguments.length ? (n = t, e) : n
                     },
                     e.orient = function (t) {
-                        return arguments.length ? (r = t in $s ? t + "" : zs, e) : r
+                        return arguments.length ? (r = t in $s ? t + "" : Bs, e) : r
                     },
                     e.ticks = function () {
                         return arguments.length ? (l = arguments, e) : l
@@ -38942,7 +38941,7 @@ webpackJsonp([4], [function (e, t, n) {
                     },
                     e
                 };
-                var zs = "bottom",
+                var Bs = "bottom",
                 $s = {
                     top: 1,
                     right: 1,
@@ -41817,12 +41816,12 @@ webpackJsonp([4], [function (e, t, n) {
                             }, e.container = this, A.setter(P(d), e.update).getter(L(d)).update(), A.disabled = d.map(function (e) {
                                     return !!e.disabled
                                 }), !T) {
-                                var B;
+                                var z;
                                 T = {};
-                                for (B in A)
-                                    A[B]instanceof Array ? T[B] = A[B].slice(0) : T[B] = A[B]
+                                for (z in A)
+                                    A[z]instanceof Array ? T[z] = A[z].slice(0) : T[z] = A[z]
                             }
-                            var z = d3.behavior.drag().on("dragstart", I).on("drag", M).on("dragend", N);
+                            var B = d3.behavior.drag().on("dragstart", I).on("drag", M).on("dragend", N);
                             if (!(d && d.length && d.filter(function (e) {
                                         return e.values.length
                                     }).length))
@@ -41912,7 +41911,7 @@ webpackJsonp([4], [function (e, t, n) {
                             }).attr("x1", 0).attr("x2", U).attr("y1", ee).attr("y2", ee),
                             J.exit().remove();
                             var te = Z.selectAll(".nv-indexLine").data([R]);
-                            te.enter().append("rect").attr("class", "nv-indexLine").attr("width", 3).attr("x", -2).attr("fill", "red").attr("fill-opacity", .5).style("pointer-events", "all").call(z),
+                            te.enter().append("rect").attr("class", "nv-indexLine").attr("width", 3).attr("x", -2).attr("fill", "red").attr("fill-opacity", .5).style("pointer-events", "all").call(B),
                             te.attr("transform", function (e) {
                                 return "translate(" + O(e.i) + ",0)"
                             }).attr("height", V),
@@ -43803,8 +43802,7 @@ webpackJsonp([4], [function (e, t, n) {
                     "use strict";
                     function e(g) {
                         function v(e, t) {
-                            return "furious" != p ? "#000" : f ? e.disengaged ? "#000" : "#fff" : f ? void 0 : (e.color || (e.color = a(e, t)),
-                                e.disabled ? e.color : "#fff")
+                            return "furious" != p ? "#000" : f ? e.disengaged ? "#000" : "#fff" : f ? void 0 : (e.color || (e.color = a(e, t)), e.disabled ? e.color : "#fff")
                         }
                         function h(e, t) {
                             return f && "furious" == p && e.disengaged ? "#eee" : e.color || a(e, t)
@@ -44757,7 +44755,7 @@ webpackJsonp([4], [function (e, t, n) {
                             K = N - w.top - w.bottom;
                             if (e.update = function () {
                                 j.transition().duration(G).call(e)
-                            }, e.container = this, F.setter($(S), e.update).getter(z(S)).update(), F.disabled = S.map(function (e) {
+                            }, e.container = this, F.setter($(S), e.update).getter(B(S)).update(), F.disabled = S.map(function (e) {
                                     return !!e.disabled
                                 }), !U) {
                                 var Q;
@@ -44823,7 +44821,7 @@ webpackJsonp([4], [function (e, t, n) {
                                 y.width(ae),
                                 re.select(".nv-legendWrap").datum(S.map(function (e) {
                                         return e.originalKey = void 0 === e.originalKey ? e.key : e.originalKey,
-                                        e.key = e.originalKey + (e.bar ? V : B),
+                                        e.key = e.originalKey + (e.bar ? V : z),
                                         e
                                     })).call(y),
                                 _.top != y.height() && (_.top = y.height(), Y = t.utils.availableHeight(T, j, _) - N),
@@ -44932,7 +44930,7 @@ webpackJsonp([4], [function (e, t, n) {
                     F = t.utils.state(),
                     U = null,
                     V = " (left axis)",
-                    B = " (right axis)";
+                    z = " (right axis)";
                     c.clipEdge(!0),
                     u.interactive(!1),
                     m.orient("bottom").tickPadding(5),
@@ -44944,7 +44942,7 @@ webpackJsonp([4], [function (e, t, n) {
                     S.headerEnabled(!0).headerFormatter(function (e, t) {
                         return m.tickFormat()(e, t)
                     });
-                    var z = function (e) {
+                    var B = function (e) {
                         return function () {
                             return {
                                 active: e.map(function (e) {
@@ -45084,10 +45082,10 @@ webpackJsonp([4], [function (e, t, n) {
                         },
                         legendRightAxisHint: {
                             get: function () {
-                                return B
+                                return z
                             },
                             set: function (e) {
-                                B = e
+                                z = e
                             }
                         },
                         tooltips: {
@@ -45193,7 +45191,7 @@ webpackJsonp([4], [function (e, t, n) {
                                         brush: m
                                     }),
                                     R();
-                                    var t = z.select(".nv-focus .nv-linesWrap").datum(p.filter(function (e) {
+                                    var t = B.select(".nv-focus .nv-linesWrap").datum(p.filter(function (e) {
                                                 return !e.disabled
                                             }).map(function (t, n) {
                                                 return {
@@ -45205,8 +45203,8 @@ webpackJsonp([4], [function (e, t, n) {
                                                 }
                                             }));
                                     t.transition().duration(C).call(a),
-                                    z.select(".nv-focus .nv-x.nv-axis").transition().duration(C).call(s),
-                                    z.select(".nv-focus .nv-y.nv-axis").transition().duration(C).call(c)
+                                    B.select(".nv-focus .nv-x.nv-axis").transition().duration(C).call(s),
+                                    B.select(".nv-focus .nv-y.nv-axis").transition().duration(C).call(c)
                                 }
                             }
                             var L = d3.select(this),
@@ -45235,21 +45233,21 @@ webpackJsonp([4], [function (e, t, n) {
                             i = l.xScale(),
                             o = l.yScale();
                             var V = L.selectAll("g.nv-wrap.nv-lineWithFocusChart").data([p]),
-                            B = V.enter().append("g").attr("class", "nvd3 nv-wrap nv-lineWithFocusChart").append("g"),
-                            z = V.select("g");
-                            B.append("g").attr("class", "nv-legendWrap");
-                            var $ = B.append("g").attr("class", "nv-focus");
+                            z = V.enter().append("g").attr("class", "nvd3 nv-wrap nv-lineWithFocusChart").append("g"),
+                            B = V.select("g");
+                            z.append("g").attr("class", "nv-legendWrap");
+                            var $ = z.append("g").attr("class", "nv-focus");
                             $.append("g").attr("class", "nv-x nv-axis"),
                             $.append("g").attr("class", "nv-y nv-axis"),
                             $.append("g").attr("class", "nv-linesWrap"),
                             $.append("g").attr("class", "nv-interactive");
-                            var W = B.append("g").attr("class", "nv-context");
+                            var W = z.append("g").attr("class", "nv-context");
                             W.append("g").attr("class", "nv-x nv-axis"),
                             W.append("g").attr("class", "nv-y nv-axis"),
                             W.append("g").attr("class", "nv-linesWrap"),
                             W.append("g").attr("class", "nv-brushBackground"),
                             W.append("g").attr("class", "nv-x nv-brush"),
-                            w && (f.width(k), z.select(".nv-legendWrap").datum(p).call(f), v.top != f.height() && (v.top = f.height(), G = t.utils.availableHeight(E, L, v) - S), z.select(".nv-legendWrap").attr("transform", "translate(0," + -v.top + ")")),
+                            w && (f.width(k), B.select(".nv-legendWrap").datum(p).call(f), v.top != f.height() && (v.top = f.height(), G = t.utils.availableHeight(E, L, v) - S), B.select(".nv-legendWrap").attr("transform", "translate(0," + -v.top + ")")),
                             V.attr("transform", "translate(" + v.left + "," + v.top + ")"),
                             _ && (g.width(k).height(G).margin({
                                     left: v.left,
@@ -45265,32 +45263,32 @@ webpackJsonp([4], [function (e, t, n) {
                                 }).filter(function (e, t) {
                                     return !p[t].disabled
                                 })),
-                            z.select(".nv-context").attr("transform", "translate(0," + (G + v.bottom + h.top) + ")");
-                            var H = z.select(".nv-context .nv-linesWrap").datum(p.filter(function (e) {
+                            B.select(".nv-context").attr("transform", "translate(0," + (G + v.bottom + h.top) + ")");
+                            var H = B.select(".nv-context .nv-linesWrap").datum(p.filter(function (e) {
                                         return !e.disabled
                                     }));
                             d3.transition(H).call(l),
                             s.scale(n)._ticks(t.utils.calcTicksX(k / 100, p)).tickSize(-G, 0),
                             c.scale(r)._ticks(t.utils.calcTicksY(G / 36, p)).tickSize(-k, 0),
-                            z.select(".nv-focus .nv-x.nv-axis").attr("transform", "translate(0," + G + ")"),
+                            B.select(".nv-focus .nv-x.nv-axis").attr("transform", "translate(0," + G + ")"),
                             m.x(i).on("brush", function () {
                                 N()
                             }),
                             A && m.extent(A);
-                            var j = z.select(".nv-brushBackground").selectAll("g").data([A || m.extent()]),
+                            var j = B.select(".nv-brushBackground").selectAll("g").data([A || m.extent()]),
                             q = j.enter().append("g");
                             q.append("rect").attr("class", "left").attr("x", 0).attr("y", 0).attr("height", F),
                             q.append("rect").attr("class", "right").attr("x", 0).attr("y", 0).attr("height", F);
-                            var Y = z.select(".nv-x.nv-brush").call(m);
+                            var Y = B.select(".nv-x.nv-brush").call(m);
                             Y.selectAll("rect").attr("height", F),
                             Y.selectAll(".resize").append("path").attr("d", T),
                             N(),
                             u.scale(i)._ticks(t.utils.calcTicksX(k / 100, p)).tickSize(-F, 0),
-                            z.select(".nv-context .nv-x.nv-axis").attr("transform", "translate(0," + o.range()[0] + ")"),
-                            d3.transition(z.select(".nv-context .nv-x.nv-axis")).call(u),
+                            B.select(".nv-context .nv-x.nv-axis").attr("transform", "translate(0," + o.range()[0] + ")"),
+                            d3.transition(B.select(".nv-context .nv-x.nv-axis")).call(u),
                             d.scale(o)._ticks(t.utils.calcTicksY(F / 36, p)).tickSize(-k, 0),
-                            d3.transition(z.select(".nv-context .nv-y.nv-axis")).call(d),
-                            z.select(".nv-context .nv-x.nv-axis").attr("transform", "translate(0," + o.range()[0] + ")"),
+                            d3.transition(B.select(".nv-context .nv-y.nv-axis")).call(d),
+                            B.select(".nv-context .nv-x.nv-axis").attr("transform", "translate(0," + o.range()[0] + ")"),
                             f.dispatch.on("stateChange", function (t) {
                                 for (var n in t)
                                     x[n] = t[n];
@@ -45690,12 +45688,12 @@ webpackJsonp([4], [function (e, t, n) {
                                 return t
                             });
                             V.enter().append("g").style("stroke-opacity", 1e-6).style("fill-opacity", 1e-6);
-                            var B = x.transition(V.exit().selectAll("rect.nv-bar"), "multibarExit", Math.min(100, T)).attr("y", function (t, n, r) {
+                            var z = x.transition(V.exit().selectAll("rect.nv-bar"), "multibarExit", Math.min(100, T)).attr("y", function (t, n, r) {
                                 var i = s(0) || 0;
                                 return E && e[t.series] && !e[t.series].nonStackable && (i = s(t.y0)),
                                 i
                             }).attr("height", 0).remove();
-                            B.delay && B.delay(function (e, t) {
+                            z.delay && z.delay(function (e, t) {
                                 var n = t * (T / (D + 1)) - t;
                                 return n
                             }),
@@ -45709,11 +45707,11 @@ webpackJsonp([4], [function (e, t, n) {
                                 return _(e, t)
                             }),
                             V.style("stroke-opacity", 1).style("fill-opacity", .75);
-                            var z = V.selectAll("rect.nv-bar").data(function (t) {
+                            var B = V.selectAll("rect.nv-bar").data(function (t) {
                                 return w && !e.length ? w.values : t.values
                             });
-                            z.exit().remove();
-                            z.enter().append("rect").attr("class", function (e, t) {
+                            B.exit().remove();
+                            B.enter().append("rect").attr("class", function (e, t) {
                                 return h(e, t) < 0 ? "nv-bar negative" : "nv-bar positive"
                             }).attr("x", function (t, n, r) {
                                 return E && !e[r].nonStackable ? 0 : r * f.rangeBand() / e.length
@@ -45724,7 +45722,7 @@ webpackJsonp([4], [function (e, t, n) {
                             }).attr("transform", function (e, t) {
                                 return "translate(" + f(v(e, t)) + ",0)"
                             });
-                            z.style("fill", function (e, t, n) {
+                            B.style("fill", function (e, t, n) {
                                 return _(e, n, t)
                             }).style("stroke", function (e, t, n) {
                                 return _(e, n, t)
@@ -45763,14 +45761,14 @@ webpackJsonp([4], [function (e, t, n) {
                                 }),
                                 d3.event.stopPropagation()
                             }),
-                            z.attr("class", function (e, t) {
+                            B.attr("class", function (e, t) {
                                 return h(e, t) < 0 ? "nv-bar negative" : "nv-bar positive"
                             }).attr("transform", function (e, t) {
                                 return "translate(" + f(v(e, t)) + ",0)"
                             }),
                             A && (n || (n = e.map(function () {
                                         return !0
-                                    })), z.style("fill", function (e, t, r) {
+                                    })), B.style("fill", function (e, t, r) {
                                     return d3.rgb(A(e, t)).darker(n.map(function (e, t) {
                                             return t
                                         }).filter(function (e, t) {
@@ -45783,7 +45781,7 @@ webpackJsonp([4], [function (e, t, n) {
                                             return !n[t]
                                         })[r]).toString()
                                 }));
-                            var $ = z.watchTransition(x, "multibar", Math.min(250, T)).delay(function (t, n) {
+                            var $ = B.watchTransition(x, "multibar", Math.min(250, T)).delay(function (t, n) {
                                 return n * T / e[0].values.length
                             });
                             E ? $.attr("y", function (t, n, r) {
@@ -46102,17 +46100,17 @@ webpackJsonp([4], [function (e, t, n) {
                                 G.select(".nv-x.nv-axis").call(o);
                                 var V = G.select(".nv-x.nv-axis > g").selectAll("g");
                                 if (V.selectAll("line, text").style("opacity", 1), S) {
-                                    var B = function (e, t) {
+                                    var z = function (e, t) {
                                         return "translate(" + e + "," + t + ")"
                                     },
-                                    z = 5,
+                                    B = 5,
                                     $ = 17;
                                     V.selectAll("text").attr("transform", function (e, t, n) {
-                                        return B(0, n % 2 == 0 ? z : $)
+                                        return z(0, n % 2 == 0 ? B : $)
                                     });
                                     var W = d3.selectAll(".nv-x.nv-axis .nv-wrap g g text")[0].length;
                                     G.selectAll(".nv-x.nv-axis .nv-axisMaxMin text").attr("transform", function (e, t) {
-                                        return B(0, 0 === t || W % 2 !== 0 ? $ : z)
+                                        return z(0, 0 === t || W % 2 !== 0 ? $ : B)
                                     })
                                 }
                                 E && V.filter(function (e, t) {
@@ -47267,58 +47265,58 @@ webpackJsonp([4], [function (e, t, n) {
                             V.append("g").attr("class", "stack1Wrap"),
                             V.append("g").attr("class", "stack2Wrap"),
                             V.append("g").attr("class", "legendWrap");
-                            var B = U.select("g"),
-                            z = c.map(function (e, t) {
+                            var z = U.select("g"),
+                            B = c.map(function (e, t) {
                                 return c[t].color || o(e, t)
                             });
                             if (s) {
                                 var $ = I.align() ? D / 2 : D,
                                 W = I.align() ? $ : 0;
                                 I.width($),
-                                I.color(z),
-                                B.select(".legendWrap").datum(c.map(function (e) {
+                                I.color(B),
+                                z.select(".legendWrap").datum(c.map(function (e) {
                                         return e.originalKey = void 0 === e.originalKey ? e.key : e.originalKey,
                                         e.key = e.originalKey + (1 == e.yAxis ? "" : " (right axis)"),
                                         e
                                     })).call(I),
                                 i.top != I.height() && (i.top = I.height(), M = t.utils.availableHeight(l, x, i)),
-                                B.select(".legendWrap").attr("transform", "translate(" + W + "," + -i.top + ")")
+                                z.select(".legendWrap").attr("transform", "translate(" + W + "," + -i.top + ")")
                             }
-                            h.width(D).height(M).interpolate(f).color(z.filter(function (e, t) {
+                            h.width(D).height(M).interpolate(f).color(B.filter(function (e, t) {
                                     return !c[t].disabled && 1 == c[t].yAxis && "line" == c[t].type
                                 })),
-                            b.width(D).height(M).interpolate(f).color(z.filter(function (e, t) {
+                            b.width(D).height(M).interpolate(f).color(B.filter(function (e, t) {
                                     return !c[t].disabled && 2 == c[t].yAxis && "line" == c[t].type
                                 })),
-                            y.width(D).height(M).color(z.filter(function (e, t) {
+                            y.width(D).height(M).color(B.filter(function (e, t) {
                                     return !c[t].disabled && 1 == c[t].yAxis && "bar" == c[t].type
                                 })),
-                            E.width(D).height(M).color(z.filter(function (e, t) {
+                            E.width(D).height(M).color(B.filter(function (e, t) {
                                     return !c[t].disabled && 2 == c[t].yAxis && "bar" == c[t].type
                                 })),
-                            S.width(D).height(M).color(z.filter(function (e, t) {
+                            S.width(D).height(M).color(B.filter(function (e, t) {
                                     return !c[t].disabled && 1 == c[t].yAxis && "area" == c[t].type
                                 })),
-                            _.width(D).height(M).color(z.filter(function (e, t) {
+                            _.width(D).height(M).color(B.filter(function (e, t) {
                                     return !c[t].disabled && 2 == c[t].yAxis && "area" == c[t].type
                                 })),
-                            B.attr("transform", "translate(" + i.left + "," + i.top + ")");
-                            var H = B.select(".lines1Wrap").datum(O.filter(function (e) {
+                            z.attr("transform", "translate(" + i.left + "," + i.top + ")");
+                            var H = z.select(".lines1Wrap").datum(O.filter(function (e) {
                                         return !e.disabled
                                     })),
-                            j = B.select(".bars1Wrap").datum(N.filter(function (e) {
+                            j = z.select(".bars1Wrap").datum(N.filter(function (e) {
                                         return !e.disabled
                                     })),
-                            q = B.select(".stack1Wrap").datum(P.filter(function (e) {
+                            q = z.select(".stack1Wrap").datum(P.filter(function (e) {
                                         return !e.disabled
                                     })),
-                            Y = B.select(".lines2Wrap").datum(R.filter(function (e) {
+                            Y = z.select(".lines2Wrap").datum(R.filter(function (e) {
                                         return !e.disabled
                                     })),
-                            K = B.select(".bars2Wrap").datum(L.filter(function (e) {
+                            K = z.select(".bars2Wrap").datum(L.filter(function (e) {
                                         return !e.disabled
                                     })),
-                            Q = B.select(".stack2Wrap").datum(k.filter(function (e) {
+                            Q = z.select(".stack2Wrap").datum(k.filter(function (e) {
                                         return !e.disabled
                                     })),
                             Z = P.length ? P.map(function (e) {
@@ -47368,14 +47366,14 @@ webpackJsonp([4], [function (e, t, n) {
                             O.length && d3.transition(H).call(h),
                             R.length && d3.transition(Y).call(b),
                             w._ticks(t.utils.calcTicksX(D / 100, c)).tickSize(-M, 0),
-                            B.select(".nv-x.nv-axis").attr("transform", "translate(0," + M + ")"),
-                            d3.transition(B.select(".nv-x.nv-axis")).call(w),
+                            z.select(".nv-x.nv-axis").attr("transform", "translate(0," + M + ")"),
+                            d3.transition(z.select(".nv-x.nv-axis")).call(w),
                             A._ticks(t.utils.calcTicksY(M / 36, c)).tickSize(-D, 0),
-                            d3.transition(B.select(".nv-y1.nv-axis")).call(A),
+                            d3.transition(z.select(".nv-y1.nv-axis")).call(A),
                             T._ticks(t.utils.calcTicksY(M / 36, c)).tickSize(-D, 0),
-                            d3.transition(B.select(".nv-y2.nv-axis")).call(T),
-                            B.select(".nv-y1.nv-axis").classed("nv-disabled", !G.length).attr("transform", "translate(" + p.range()[0] + ",0)"),
-                            B.select(".nv-y2.nv-axis").classed("nv-disabled", !F.length).attr("transform", "translate(" + p.range()[1] + ",0)"),
+                            d3.transition(z.select(".nv-y2.nv-axis")).call(T),
+                            z.select(".nv-y1.nv-axis").classed("nv-disabled", !G.length).attr("transform", "translate(" + p.range()[0] + ",0)"),
+                            z.select(".nv-y2.nv-axis").classed("nv-disabled", !F.length).attr("transform", "translate(" + p.range()[1] + ",0)"),
                             I.dispatch.on("stateChange", function (t) {
                                 e.update()
                             }),
@@ -48208,13 +48206,13 @@ webpackJsonp([4], [function (e, t, n) {
                             t.utils.initSVG(s);
                             var U = s.selectAll(".nv-wrap.nv-pie").data(e),
                             V = U.enter().append("g").attr("class", "nvd3 nv-wrap nv-pie nv-chart-" + l),
-                            B = V.append("g"),
-                            z = U.select("g"),
-                            $ = B.append("g").attr("class", "nv-pie");
-                            B.append("g").attr("class", "nv-pieLabels"),
+                            z = V.append("g"),
+                            B = U.select("g"),
+                            $ = z.append("g").attr("class", "nv-pie");
+                            z.append("g").attr("class", "nv-pieLabels"),
                             U.attr("transform", "translate(" + n.left + "," + n.top + ")"),
-                            z.select(".nv-pie").attr("transform", "translate(" + O / 2 + "," + R / 2 + ")"),
-                            z.select(".nv-pieLabels").attr("transform", "translate(" + O / 2 + "," + R / 2 + ")"),
+                            B.select(".nv-pie").attr("transform", "translate(" + O / 2 + "," + R / 2 + ")"),
+                            B.select(".nv-pieLabels").attr("transform", "translate(" + O / 2 + "," + R / 2 + ")"),
                             s.on("click", function (e, t) {
                                 I.chartClick({
                                     data: e,
@@ -48838,7 +48836,7 @@ webpackJsonp([4], [function (e, t, n) {
                 t.models.scatter = function () {
                     "use strict";
                     function e(U) {
-                        return B.reset(),
+                        return z.reset(),
                         U.each(function (e) {
                             function U() {
                                 if (V = !1, !_)
@@ -48994,7 +48992,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     }).concat(E))).range(N || [W, 0]),
                             p.domain(L || d3.extent(H.map(function (e) {
                                         return e.size
-                                    }).concat(S))).range(P || z),
+                                    }).concat(S))).range(P || B),
                             k = f.domain()[0] === f.domain()[1] || m.domain()[0] === m.domain()[1],
                             f.domain()[0] === f.domain()[1] && (f.domain()[0] ? f.domain([f.domain()[0] - .01 * f.domain()[0], f.domain()[1] + .01 * f.domain()[1]]) : f.domain([-1, 1])),
                             m.domain()[0] === m.domain()[1] && (m.domain()[0] ? m.domain([m.domain()[0] - .01 * m.domain()[0], m.domain()[1] + .01 * m.domain()[1]]) : m.domain([-1, 1])),
@@ -49029,7 +49027,7 @@ webpackJsonp([4], [function (e, t, n) {
                             }).classed("hover", function (e) {
                                 return e.hover
                             }),
-                            Z.watchTransition(B, "scatter: groups").style("fill", function (e, t) {
+                            Z.watchTransition(z, "scatter: groups").style("fill", function (e, t) {
                                 return c(e, t)
                             }).style("stroke", function (e, t) {
                                 return c(e, t)
@@ -49053,13 +49051,13 @@ webpackJsonp([4], [function (e, t, n) {
                                     return p(h(e[0], e[1]))
                                 })),
                             X.exit().remove(),
-                            Z.exit().selectAll("path.nv-point").watchTransition(B, "scatter exit").attr("transform", function (e) {
+                            Z.exit().selectAll("path.nv-point").watchTransition(z, "scatter exit").attr("transform", function (e) {
                                 return "translate(" + f(g(e[0], e[1])) + "," + m(v(e[0], e[1])) + ")"
                             }).remove(),
                             X.each(function (e) {
                                 d3.select(this).classed("nv-point", !0).classed("nv-point-" + e[1], !0).classed("nv-noninteractive", !_).classed("hover", !1)
                             }),
-                            X.watchTransition(B, "scatter points").attr("transform", function (e) {
+                            X.watchTransition(z, "scatter points").attr("transform", function (e) {
                                 return "translate(" + f(g(e[0], e[1])) + "," + m(v(e[0], e[1])) + ")"
                             }).attr("d", t.utils.symbol().type(function (e) {
                                     return b(e[0])
@@ -49072,7 +49070,7 @@ webpackJsonp([4], [function (e, t, n) {
                             r = m.copy(),
                             i = p.copy()
                         }),
-                        B.renderEnd("scatter immediate"),
+                        z.renderEnd("scatter immediate"),
                         e
                     }
                     var n,
@@ -49131,8 +49129,8 @@ webpackJsonp([4], [function (e, t, n) {
                     F = !0,
                     U = 250,
                     V = !1,
-                    B = t.utils.renderWatch(G, U),
-                    z = [16, 256];
+                    z = t.utils.renderWatch(G, U),
+                    B = [16, 256];
                     return e.dispatch = G,
                     e.options = t.utils.optionsFunc.bind(e),
                     e._calls = new function () {
@@ -49388,7 +49386,7 @@ webpackJsonp([4], [function (e, t, n) {
                             },
                             set: function (e) {
                                 U = e,
-                                B.reset(U)
+                                z.reset(U)
                             }
                         },
                         color: {
@@ -49469,11 +49467,11 @@ webpackJsonp([4], [function (e, t, n) {
                                 return e
                             });
                             V.enter().append("g").attr("class", "nv-regLines");
-                            var B = V.selectAll(".nv-regLine").data(function (e) {
+                            var z = V.selectAll(".nv-regLine").data(function (e) {
                                 return [e]
                             });
-                            B.enter().append("line").attr("class", "nv-regLine").style("stroke-opacity", 0),
-                            B.filter(function (e) {
+                            z.enter().append("line").attr("class", "nv-regLine").style("stroke-opacity", 0),
+                            z.filter(function (e) {
                                 return e.intercept && e.slope
                             }).watchTransition(D, "scatterPlusLineChart: regline").attr("x1", p.range()[0]).attr("x2", p.range()[1]).attr("y1", function (e, t) {
                                 return g(p.domain()[0] * e.slope + e.intercept)
@@ -50465,13 +50463,13 @@ webpackJsonp([4], [function (e, t, n) {
                             r = i.yScale();
                             var U = w.selectAll("g.nv-wrap.nv-stackedAreaChart").data([u]),
                             V = U.enter().append("g").attr("class", "nvd3 nv-wrap nv-stackedAreaChart").append("g"),
-                            B = U.select("g");
-                            if (V.append("rect").style("opacity", 0), V.append("g").attr("class", "nv-x nv-axis"), V.append("g").attr("class", "nv-y nv-axis"), V.append("g").attr("class", "nv-stackedWrap"), V.append("g").attr("class", "nv-legendWrap"), V.append("g").attr("class", "nv-controlsWrap"), V.append("g").attr("class", "nv-interactive"), B.select("rect").attr("width", k).attr("height", G), v) {
-                                var z = g ? k - T : k;
-                                l.width(z),
-                                B.select(".nv-legendWrap").datum(u).call(l),
+                            z = U.select("g");
+                            if (V.append("rect").style("opacity", 0), V.append("g").attr("class", "nv-x nv-axis"), V.append("g").attr("class", "nv-y nv-axis"), V.append("g").attr("class", "nv-stackedWrap"), V.append("g").attr("class", "nv-legendWrap"), V.append("g").attr("class", "nv-controlsWrap"), V.append("g").attr("class", "nv-interactive"), z.select("rect").attr("width", k).attr("height", G), v) {
+                                var B = g ? k - T : k;
+                                l.width(B),
+                                z.select(".nv-legendWrap").datum(u).call(l),
                                 d.top != l.height() && (d.top = l.height(), G = t.utils.availableHeight(m, w, d)),
-                                B.select(".nv-legendWrap").attr("transform", "translate(" + (k - z) + "," + -d.top + ")")
+                                z.select(".nv-legendWrap").attr("transform", "translate(" + (k - B) + "," + -d.top + ")")
                             }
                             if (g) {
                                 var $ = [{
@@ -50501,19 +50499,19 @@ webpackJsonp([4], [function (e, t, n) {
                                     return I.indexOf(e.metaKey) !== -1
                                 }),
                                 s.width(T).color(["#444", "#444", "#444"]),
-                                B.select(".nv-controlsWrap").datum($).call(s),
+                                z.select(".nv-controlsWrap").datum($).call(s),
                                 d.top != Math.max(s.height(), l.height()) && (d.top = Math.max(s.height(), l.height()), G = t.utils.availableHeight(m, w, d)),
-                                B.select(".nv-controlsWrap").attr("transform", "translate(0," + -d.top + ")")
+                                z.select(".nv-controlsWrap").attr("transform", "translate(0," + -d.top + ")")
                             }
                             U.attr("transform", "translate(" + d.left + "," + d.top + ")"),
-                            y && B.select(".nv-y.nv-axis").attr("transform", "translate(" + k + ",0)"),
+                            y && z.select(".nv-y.nv-axis").attr("transform", "translate(" + k + ",0)"),
                             E && (c.width(k).height(G).margin({
                                     left: d.left,
                                     top: d.top
                                 }).svgContainer(w).xScale(n), U.select(".nv-interactive").call(c)),
                             i.width(k).height(G);
-                            var W = B.select(".nv-stackedWrap").datum(u);
-                            if (W.transition().call(i), h && (o.scale(n)._ticks(t.utils.calcTicksX(k / 100, u)).tickSize(-G, 0), B.select(".nv-x.nv-axis").attr("transform", "translate(0," + G + ")"), B.select(".nv-x.nv-axis").transition().duration(0).call(o)), b) {
+                            var W = z.select(".nv-stackedWrap").datum(u);
+                            if (W.transition().call(i), h && (o.scale(n)._ticks(t.utils.calcTicksX(k / 100, u)).tickSize(-G, 0), z.select(".nv-x.nv-axis").attr("transform", "translate(0," + G + ")"), z.select(".nv-x.nv-axis").transition().duration(0).call(o)), b) {
                                 var H;
                                 if (H = "wiggle" === i.offset() ? 0 : t.utils.calcTicksY(G / 36, u), a.scale(r)._ticks(H).tickSize(-k, 0), "expand" === i.style() || "stack_percent" === i.style()) {
                                     var j = a.tickFormat();
@@ -50521,7 +50519,7 @@ webpackJsonp([4], [function (e, t, n) {
                                     a.tickFormat(P)
                                 } else
                                     D && (a.tickFormat(D), D = null);
-                                B.select(".nv-y.nv-axis").transition().duration(0).call(a)
+                                z.select(".nv-y.nv-axis").transition().duration(0).call(a)
                             }
                             i.dispatch.on("areaClick.toggle", function (t) {
                                 1 === u.filter(function (e) {
@@ -51276,4 +51274,3 @@ webpackJsonp([4], [function (e, t, n) {
             e.exports = n(2)(419)
         }
     ]);
-//# sourceMappingURL=app.js.map
